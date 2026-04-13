@@ -16,48 +16,166 @@ import HelpLayout from '../layouts/HelpLayout.astro';
 
         <div class="help-content">
             <h2>Aceptacion de terminos</h2>
-            <p>Al usar Grupero, aceptas estos terminos. Si no estas de acuerdo, no uses la aplicacion.</p>
+            <p>Al descargar, instalar o usar Grupero, aceptas estos terminos de servicio. Si no estas de acuerdo con alguna parte, no uses la aplicacion.</p>
 
             <h2>Descripcion del servicio</h2>
-            <p>Grupero es una aplicacion que analiza chats exportados de WhatsApp para proporcionar estadisticas y metricas de participacion. El servicio se ofrece "tal cual" sin garantias de disponibilidad continua.</p>
+            <p>Grupero es una aplicacion que analiza chats exportados de WhatsApp para proporcionar estadisticas y metricas de participacion. El servicio incluye:</p>
+            <ul>
+                <li>Analisis de participacion y actividad de miembros</li>
+                <li>Estadisticas temporales (heatmaps, tendencias, etc.)</li>
+                <li>Analisis social (emojis, palabras frecuentes, sentimiento)</li>
+                <li>Metricas de salud del grupo</li>
+                <li>Deteccion de eventos y confirmaciones</li>
+                <li>Funciones especiales para grupos deportivos</li>
+                <li>Exportacion de reportes (PDF, CSV, imagen)</li>
+            </ul>
+            <p>El servicio se ofrece "tal cual" sin garantias de disponibilidad continua o resultados especificos.</p>
 
             <h2>Uso aceptable</h2>
-            <p>Te comprometes a:</p>
+            <p>Al usar Grupero, te comprometes a:</p>
             <ul>
-                <li>Usar Grupero solo para analizar grupos donde tienes permiso o eres administrador</li>
-                <li>No usar la app para acosar, discriminar o danar a otros</li>
+                <li>Usar la app solo para analizar grupos donde <strong>tienes permiso</strong> o eres administrador</li>
+                <li>No usar los analisis para acosar, discriminar, humillar o danar a otros</li>
+                <li>No compartir reportes publicamente sin consentimiento del grupo</li>
+                <li>No usar la "lista de purga" o clasificaciones para tomar decisiones que afecten negativamente a personas</li>
+                <li>Entender que las clasificaciones (Chancletas, Ghost, etc.) son <strong>humoristicas</strong> y no juicios de valor</li>
                 <li>No intentar acceder a funciones de pago sin autorizacion</li>
                 <li>No realizar ingenieria inversa de la aplicacion</li>
+                <li>No usar la app para fines ilegales</li>
             </ul>
 
+            <div class="info-box warning">
+                <p><strong>Importante:</strong> Las estadisticas y clasificaciones de Grupero son herramientas informativas y humoristicas. No deben usarse para tomar decisiones que perjudiquen a personas ni para justificar exclusiones o discriminacion.</p>
+            </div>
+
+            <h2>Responsabilidad del usuario</h2>
+            <p>Tu eres responsable de:</p>
+
+            <h3>Consentimiento del grupo</h3>
+            <ul>
+                <li>Obtener permiso apropiado para analizar un grupo</li>
+                <li>Informar a los miembros si planeas compartir estadisticas</li>
+                <li>Respetar la privacidad de los participantes del grupo</li>
+            </ul>
+
+            <h3>Uso de reportes</h3>
+            <ul>
+                <li>Decidir con quien compartes los reportes exportados</li>
+                <li>Las consecuencias de compartir estadisticas publicamente</li>
+                <li>El uso que das a la informacion de "lista de purga" o "alertas de silencio"</li>
+            </ul>
+
+            <h3>Interpretacion de datos</h3>
+            <ul>
+                <li>Entender que las estadisticas son aproximaciones basadas en texto</li>
+                <li>No tomar decisiones importantes basandote unicamente en los analisis</li>
+                <li>Reconocer que el "analisis de sentimiento" tiene limitaciones</li>
+            </ul>
+
+            <h2>Clasificaciones y etiquetas</h2>
+            <p>Grupero usa clasificaciones humoristicas como:</p>
+            <ul>
+                <li><strong>Los Fijos, Los Probables, Los Riesgosos, Los Chancletas:</strong> Categorias para grupos deportivos basadas en patrones de confirmacion</li>
+                <li><strong>Ghost Score:</strong> Mide la tendencia a confirmar y no asistir</li>
+                <li><strong>Observador silencioso, Esporadico:</strong> Clasificaciones de actividad</li>
+                <li><strong>Lista de purga:</strong> Sugerencia de miembros inactivos (no una recomendacion de accion)</li>
+            </ul>
+            <p>Estas clasificaciones estan disenadas para <strong>grupos de amigos</strong> en tono de broma. No deben tomarse literalmente ni usarse en contextos profesionales o para tomar decisiones serias sobre personas.</p>
+
             <h2>Propiedad intelectual</h2>
-            <p>Grupero y su contenido (diseno, codigo, marca) son propiedad de sus creadores. Los analisis generados son tuyos, pero la tecnologia que los produce es nuestra.</p>
+            <p>Grupero y su contenido (diseno, codigo, marca, algoritmos) son propiedad de sus creadores. Los analisis y reportes generados son tuyos para uso personal, pero la tecnologia que los produce es nuestra.</p>
+            <p>No puedes:</p>
+            <ul>
+                <li>Copiar o redistribuir el codigo de la aplicacion</li>
+                <li>Usar la marca "Grupero" sin autorizacion</li>
+                <li>Crear productos derivados basados en nuestra tecnologia</li>
+            </ul>
 
             <h2>Suscripciones y pagos</h2>
+
+            <h3>Plan gratuito</h3>
+            <ul>
+                <li>1 analisis de grupo por mes</li>
+                <li>Funciones basicas de estadisticas</li>
+                <li>Sin funciones de IA</li>
+            </ul>
+
+            <h3>Plan Pro</h3>
+            <ul>
+                <li>Analisis ilimitados</li>
+                <li>Todas las funciones avanzadas</li>
+                <li>Resumenes con IA</li>
+                <li>Exportacion completa</li>
+            </ul>
+
+            <h3>Terminos de pago</h3>
             <ul>
                 <li>Las suscripciones se procesan a traves de Google Play o App Store</li>
                 <li>Se renuevan automaticamente hasta que las canceles</li>
                 <li>Los precios pueden cambiar con aviso previo de 30 dias</li>
                 <li>Los reembolsos siguen las politicas de Google Play o App Store</li>
+                <li>Al cancelar, mantienes acceso hasta el fin del periodo pagado</li>
             </ul>
 
             <h2>Limitacion de responsabilidad</h2>
-            <p>Grupero no se hace responsable de:</p>
+            <p>Grupero y sus creadores <strong>no se hacen responsables</strong> de:</p>
             <ul>
                 <li>Decisiones que tomes basandote en los analisis</li>
-                <li>Conflictos que surjan del uso de la informacion</li>
-                <li>Perdida de datos por mal funcionamiento</li>
+                <li>Conflictos interpersonales que surjan del uso de la informacion</li>
+                <li>Danos a relaciones por compartir estadisticas</li>
+                <li>Exclusiones de grupos basadas en "listas de purga"</li>
+                <li>Malentendidos por clasificaciones humoristicas</li>
+                <li>Perdida de datos por mal funcionamiento del dispositivo</li>
                 <li>Interrupciones del servicio</li>
+                <li>Inexactitudes en el analisis de sentimiento u otras metricas</li>
+            </ul>
+
+            <h2>Uso de funciones con IA</h2>
+            <p>Si usas las funciones de resumen con IA (Pro):</p>
+            <ul>
+                <li>Aceptas que fragmentos de texto se envien a proveedores de IA (OpenAI/Anthropic)</li>
+                <li>Los nombres se anonimizan antes del envio</li>
+                <li>Los resultados de IA son aproximaciones y pueden contener errores</li>
+                <li>No uses resumenes de IA para decisiones legales o criticas</li>
             </ul>
 
             <h2>Relacion con WhatsApp</h2>
-            <p>Grupero no esta afiliado, patrocinado ni respaldado por WhatsApp Inc. WhatsApp es una marca registrada de WhatsApp Inc.</p>
+            <p>Grupero <strong>no esta afiliado, patrocinado ni respaldado</strong> por WhatsApp Inc. o Meta Platforms, Inc.</p>
+            <ul>
+                <li>WhatsApp es una marca registrada de WhatsApp Inc.</li>
+                <li>Usamos la funcion oficial "Exportar chat" de WhatsApp</li>
+                <li>No accedemos a tu cuenta de WhatsApp</li>
+                <li>No instalamos bots ni modificamos WhatsApp</li>
+                <li>Cumplimos con los terminos de uso de WhatsApp</li>
+            </ul>
+
+            <h2>Terminacion</h2>
+            <p>Podemos suspender o terminar tu acceso a Grupero si:</p>
+            <ul>
+                <li>Violas estos terminos de servicio</li>
+                <li>Usas la app para actividades ilegales</li>
+                <li>Intentas explotar vulnerabilidades</li>
+                <li>Compartes tu cuenta Pro con terceros</li>
+            </ul>
 
             <h2>Modificaciones</h2>
-            <p>Podemos actualizar estos terminos. Te notificaremos de cambios significativos a traves de la app o email.</p>
+            <p>Podemos actualizar estos terminos. Te notificaremos de cambios significativos mediante:</p>
+            <ul>
+                <li>Aviso dentro de la app</li>
+                <li>Email si nos lo proporcionaste</li>
+                <li>Solicitud de aceptacion de nuevos terminos</li>
+            </ul>
+            <p>El uso continuado despues de cambios implica aceptacion.</p>
+
+            <h2>Ley aplicable</h2>
+            <p>Estos terminos se rigen por las leyes de Panama. Cualquier disputa se resolvera en los tribunales de Ciudad de Panama.</p>
 
             <h2>Contacto</h2>
-            <p>Para preguntas legales: <a href="mailto:legal@grupero.app">legal@grupero.app</a></p>
+            <p>Para preguntas sobre estos terminos:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:legal@grupero.app">legal@grupero.app</a></li>
+                <li><strong>Soporte:</strong> <a href="mailto:soporte@grupero.app">soporte@grupero.app</a></li>
+            </ul>
         </div>
 
         <div class="related-articles">

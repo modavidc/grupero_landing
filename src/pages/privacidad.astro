@@ -16,52 +16,160 @@ import HelpLayout from '../layouts/HelpLayout.astro';
 
         <div class="help-content">
             <div class="info-box">
-                <p><strong>Resumen:</strong> Tus conversaciones nunca salen de tu dispositivo. Grupero procesa todo localmente. No tenemos acceso a tus mensajes.</p>
+                <p><strong>Resumen:</strong> Tus conversaciones nunca salen de tu dispositivo. Grupero procesa todo localmente. No tenemos acceso a tus mensajes ni a las estadisticas que generamos.</p>
             </div>
 
+            <h2>Principio fundamental</h2>
+            <p>Grupero esta disenado con <strong>privacidad por defecto</strong>. Todo el procesamiento de tus chats de WhatsApp ocurre exclusivamente en tu dispositivo. Nosotros, como desarrolladores, <strong>nunca vemos, accedemos ni almacenamos</strong> el contenido de tus conversaciones.</p>
+
             <h2>Informacion que NO recopilamos</h2>
+            <p>Queremos ser absolutamente claros. <strong>Nunca</strong> recopilamos:</p>
             <ul>
                 <li>Contenido de tus conversaciones de WhatsApp</li>
                 <li>Nombres o numeros de telefono de los miembros del grupo</li>
-                <li>Archivos multimedia compartidos</li>
+                <li>Archivos multimedia compartidos en el grupo</li>
                 <li>Tu cuenta de WhatsApp o credenciales</li>
+                <li>Las estadisticas o analisis que Grupero genera</li>
+                <li>Rankings de participacion o clasificaciones de usuarios</li>
+                <li>Resultados de analisis de sentimiento</li>
+                <li>Listas de purga o alertas de silencio</li>
+                <li>Ghost scores o clasificaciones de jugadores</li>
             </ul>
 
-            <h2>Informacion que SI recopilamos</h2>
-            <p>Recopilamos datos anonimos y agregados para mejorar la app:</p>
+            <h2>Que analisis realiza Grupero (localmente)</h2>
+            <p>Para ser transparentes, estos son todos los analisis que Grupero realiza <strong>en tu dispositivo</strong>:</p>
+
+            <h3>Analisis de participantes</h3>
             <ul>
-                <li><strong>Informacion del dispositivo:</strong> Modelo, version de Android/iOS</li>
-                <li><strong>Datos de uso:</strong> Funciones mas utilizadas, errores</li>
-                <li><strong>Informacion de compra:</strong> Si tienes suscripcion Pro</li>
+                <li>Conteo de mensajes, palabras y caracteres por persona</li>
+                <li>Ranking de participacion y porcentajes</li>
+                <li>Clasificacion de actividad (activo, esporadico, observador silencioso, inactivo)</li>
+                <li>Tiempo promedio de respuesta por persona</li>
+                <li>Quien inicia conversaciones mas frecuentemente</li>
+                <li>Matriz de menciones (quien menciona a quien)</li>
             </ul>
+
+            <h3>Analisis temporal</h3>
+            <ul>
+                <li>Heatmap de actividad (hora x dia de semana)</li>
+                <li>Mensajes por dia y tendencias</li>
+                <li>Dias y horas de mayor actividad</li>
+                <li>Racha mas larga de actividad consecutiva</li>
+            </ul>
+
+            <h3>Analisis social</h3>
+            <ul>
+                <li>Emojis mas usados por el grupo y por persona</li>
+                <li>Palabras mas frecuentes</li>
+                <li>Analisis de sentimiento (positivo, neutral, negativo)</li>
+                <li>Links compartidos categorizados (YouTube, Instagram, etc.)</li>
+                <li>Preguntas que se repiten en el grupo</li>
+                <li>Conteo de mensajes eliminados por usuario</li>
+            </ul>
+
+            <h3>Salud del grupo</h3>
+            <ul>
+                <li>Score de salud general (0-100)</li>
+                <li>Semaforo de participacion (verde/amarillo/rojo)</li>
+                <li>Alertas de silencio (miembros que dejaron de participar)</li>
+                <li>Lista de purga sugerida (miembros inactivos)</li>
+                <li>Tendencia de actividad (creciendo o decayendo)</li>
+            </ul>
+
+            <h3>Eventos y convocatorias</h3>
+            <ul>
+                <li>Deteccion automatica de eventos mencionados</li>
+                <li>Seguimiento de confirmaciones (RSVP)</li>
+                <li>Tasa de asistencia por persona</li>
+                <li>Patrones de recordatorios necesarios</li>
+            </ul>
+
+            <h3>Grupos deportivos</h3>
+            <ul>
+                <li>Clasificacion de jugadores: Los Fijos, Los Probables, Los Riesgosos, Los Chancletas</li>
+                <li>Ghost score (quienes confirman pero no asisten)</li>
+                <li>Fill rate (porcentaje de cupos llenados)</li>
+                <li>Velocidad de llenado de eventos</li>
+            </ul>
+
+            <div class="info-box warning">
+                <p><strong>Importante:</strong> Todas estas clasificaciones y etiquetas son humoristicas y estan disenadas para grupos de amigos. El uso de esta informacion es responsabilidad exclusiva del usuario que importa el chat.</p>
+            </div>
+
+            <h2>Informacion que SI recopilamos</h2>
+            <p>Recopilamos datos <strong>anonimos y agregados</strong> para mejorar la app:</p>
+            <ul>
+                <li><strong>Informacion del dispositivo:</strong> Modelo, version de Android/iOS, tamano de pantalla</li>
+                <li><strong>Datos de uso anonimos:</strong> Que funciones se usan mas, errores que ocurren</li>
+                <li><strong>Informacion de compra:</strong> Si tienes suscripcion Pro (gestionado por Google Play/App Store)</li>
+            </ul>
+            <p>Estos datos <strong>no incluyen</strong> ningun contenido de tus chats ni estadisticas generadas.</p>
 
             <h2>Procesamiento local</h2>
             <p>Cuando importas un chat de WhatsApp:</p>
-            <ul>
-                <li>El archivo se procesa <strong>unicamente en tu dispositivo</strong></li>
-                <li>Los resultados del analisis se guardan localmente</li>
+            <ol>
+                <li>El archivo se lee <strong>unicamente en tu dispositivo</strong></li>
+                <li>Se parsean los mensajes y se calculan las estadisticas localmente</li>
+                <li>Los resultados se guardan en el almacenamiento interno de tu telefono</li>
+                <li>El archivo original puede ser eliminado despues del procesamiento</li>
                 <li>Puedes borrar todos los datos en cualquier momento desde Configuracion</li>
-            </ul>
+            </ol>
 
             <h2>Funciones con IA (Pro)</h2>
-            <p>Las funciones de resumen con IA envian fragmentos de texto a servicios de terceros (OpenAI/Anthropic) para procesamiento. Estos fragmentos:</p>
+            <p>Las funciones de resumen con inteligencia artificial son <strong>opcionales</strong> y requieren conexion a internet. Cuando las usas:</p>
             <ul>
-                <li>Se anonimizan antes de enviarse (nombres reemplazados por identificadores)</li>
-                <li>No se almacenan por los proveedores de IA</li>
-                <li>Solo se usan para generar el resumen solicitado</li>
+                <li>Se envian fragmentos de texto a servicios de terceros (OpenAI/Anthropic)</li>
+                <li>Los nombres se <strong>anonimizan</strong> antes de enviarse (reemplazados por "Usuario 1", "Usuario 2", etc.)</li>
+                <li>Los proveedores de IA <strong>no almacenan</strong> estos datos segun sus politicas</li>
+                <li>Solo se usa para generar el resumen solicitado</li>
+                <li>Puedes usar Grupero sin estas funciones y seguira siendo 100% offline</li>
+            </ul>
+
+            <h2>Exportar y compartir</h2>
+            <p>Grupero permite exportar reportes en PDF, CSV e imagen. Ten en cuenta:</p>
+            <ul>
+                <li>Los reportes contienen nombres y estadisticas de los miembros del grupo</li>
+                <li><strong>Tu decides</strong> con quien compartir esta informacion</li>
+                <li>Recomendamos pedir consentimiento al grupo antes de compartir estadisticas publicamente</li>
+                <li>No nos hacemos responsables del uso que des a los reportes exportados</li>
+            </ul>
+
+            <h2>Almacenamiento de datos</h2>
+            <ul>
+                <li><strong>Ubicacion:</strong> Almacenamiento interno de tu dispositivo</li>
+                <li><strong>Acceso:</strong> Solo Grupero puede acceder a estos datos</li>
+                <li><strong>Cifrado:</strong> Protegido por la seguridad nativa de tu dispositivo</li>
+                <li><strong>Backup:</strong> No incluido en backups de nube automaticamente</li>
+                <li><strong>Eliminacion:</strong> Se borran al desinstalar la app</li>
             </ul>
 
             <h2>Tus derechos</h2>
-            <p>Puedes solicitar:</p>
+            <p>Tienes derecho a:</p>
             <ul>
-                <li>Acceso a los datos que tenemos sobre ti</li>
-                <li>Eliminacion de tus datos</li>
-                <li>Exportacion de tus datos</li>
+                <li><strong>Acceso:</strong> Ver que datos anonimos tenemos sobre ti</li>
+                <li><strong>Eliminacion:</strong> Borrar tus datos de nuestros sistemas</li>
+                <li><strong>Portabilidad:</strong> Exportar tus datos en formato estandar</li>
+                <li><strong>Oposicion:</strong> Desactivar la recopilacion de datos anonimos en Configuracion</li>
             </ul>
-            <p>Contacta a <a href="mailto:privacidad@grupero.app">privacidad@grupero.app</a> para ejercer estos derechos.</p>
+            <p>Para ejercer estos derechos, contacta a <a href="mailto:privacidad@grupero.app">privacidad@grupero.app</a></p>
+
+            <h2>Menores de edad</h2>
+            <p>Grupero no esta disenado para menores de 13 anos. No recopilamos intencionalmente informacion de ninos. Si eres padre y crees que tu hijo uso la app, contactanos.</p>
+
+            <h2>Cambios en esta politica</h2>
+            <p>Podemos actualizar esta politica. Te notificaremos de cambios significativos mediante:</p>
+            <ul>
+                <li>Aviso dentro de la app</li>
+                <li>Email (si nos lo proporcionaste)</li>
+                <li>Actualizacion de la fecha "Ultima actualizacion" arriba</li>
+            </ul>
 
             <h2>Contacto</h2>
-            <p>Para preguntas sobre privacidad: <a href="mailto:privacidad@grupero.app">privacidad@grupero.app</a></p>
+            <p>Para preguntas sobre privacidad:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:privacidad@grupero.app">privacidad@grupero.app</a></li>
+                <li><strong>Responsable:</strong> Moises Cedeno</li>
+            </ul>
         </div>
 
         <div class="related-articles">
@@ -74,7 +182,7 @@ import HelpLayout from '../layouts/HelpLayout.astro';
                     <span>🍪</span> Politica de Cookies
                 </a>
                 <a href="/ayuda/privacidad-seguridad" class="related-item">
-                    <span>🔒</span> Mas sobre privacidad
+                    <span>🔒</span> Mas sobre seguridad
                 </a>
             </div>
         </div>
