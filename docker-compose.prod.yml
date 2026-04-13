@@ -16,9 +16,18 @@ services:
     labels:
       - "traefik.enable=${TRAEFIK_ENABLE:-true}"
       - "traefik.docker.network=web"
+      # HTTPS router
       - "traefik.http.routers.grupero-landing.entrypoints=websecure"
       - "traefik.http.routers.grupero-landing.rule=Host(`${DOMAIN:-grupero.modavidc.com}`)"
       - "traefik.http.routers.grupero-landing.tls.certresolver=http-resolv"
+      # HTTP router (redirect to HTTPS)
+      - "traefik.http.routers.grupero-landing-http.entrypoints=web"
+      - "traefik.http.routers.grupero-landing-http.rule=Host(`${DOMAIN:-grupero.modavidc.com}`)"
+      - "traefik.http.routers.grupero-landing-http.middlewares=redirect-to-https"
+      # Middleware redirect
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
+      # Service
       - "traefik.http.services.grupero-landing.loadbalancer.server.port=${SERVICE_PORT:-3000}"
     networks:
       - web
