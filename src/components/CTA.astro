@@ -1,5 +1,5 @@
 ---
-
+import ShareButtons from './ShareButtons.astro';
 ---
 
 <section id="descargar" class="cta">
@@ -13,6 +13,9 @@
             <a href="#" class="store-badge disabled">
                 <img src="/images/download-ios.png" alt="Próximamente en App Store" />
             </a>
+        </div>
+        <div class="cta-share">
+            <ShareButtons />
         </div>
     </div>
 </section>
@@ -67,6 +70,12 @@
 
     .store-badge.disabled:hover {
         transform: none;
+    }
+
+    .cta-share {
+        margin-top: 40px;
+        padding-top: 32px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     @media (max-width: 480px) {
