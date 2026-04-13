@@ -1,0 +1,66 @@
+---
+const personas = [
+    {
+        emoji: "🎯",
+        name: "El Curador",
+        size: "Grupos de 100-250 personas",
+        description: "Conoces al 95% de tu grupo. Tu dolor es repetir info y perseguir a los que no confirman.",
+        features: ["FAQ dinámico auto-generado", "Detector de silencios críticos", "Seguimiento de casos especiales"],
+        featured: false
+    },
+    {
+        emoji: "⚡",
+        name: "El Participativo",
+        size: "Grupos de 100-300 personas",
+        description: "Exiges participación. Necesitas datos para tomar decisiones justas.",
+        features: ["Semáforo Verde/Amarillo/Rojo", "Puntuación de participación real", "Lista de purga con evidencia", "Alertas de decaimiento"],
+        featured: true
+    },
+    {
+        emoji: "🚀",
+        name: "El Manager de Masas",
+        size: "Grupos de 500-1024 personas",
+        description: "Manejas un tsunami de mensajes. Necesitas filtrar ruido, detectar conflictos y mantener el control.",
+        features: ["Filtro ruido vs valor", "Resumen ejecutivo con IA", "Detector de conflictos", "Panel de salud del grupo"],
+        featured: false
+    }
+];
+---
+
+<section id="para-quien" class="personas">
+    <div class="container">
+        <h2 class="section-title">Para cada tipo de admin</h2>
+        <p class="section-subtitle">Ya seas de grupos pequeños o manager de miles, Grupero se adapta a ti</p>
+        <div class="personas-grid">
+            {personas.map(persona => (
+                <div class:list={["persona-card", { featured: persona.featured }]}>
+                    {persona.featured && <div class="persona-badge">Popular</div>}
+                    <div class="persona-emoji">{persona.emoji}</div>
+                    <h3>{persona.name}</h3>
+                    <p class="persona-size">{persona.size}</p>
+                    <p class="persona-desc">{persona.description}</p>
+                    <ul class="persona-features">
+                        {persona.features.map(f => <li>{f}</li>)}
+                    </ul>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .personas { padding: 100px 0; background: var(--color-white); }
+    .personas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .persona-card { position: relative; background: var(--color-bg); padding: 32px; border-radius: var(--radius-lg); border: 2px solid transparent; transition: all 0.3s ease; }
+    .persona-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .persona-card.featured { background: var(--color-white); border-color: var(--color-primary); box-shadow: var(--shadow-lg); }
+    .persona-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--color-primary); color: white; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: var(--radius-full); }
+    .persona-emoji { font-size: 2.5rem; margin-bottom: 16px; }
+    .persona-card h3 { font-size: 1.375rem; font-weight: 700; margin-bottom: 4px; }
+    .persona-size { font-size: 0.875rem; color: var(--color-primary-dark); font-weight: 600; margin-bottom: 12px; }
+    .persona-desc { color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 20px; }
+    .persona-features { display: flex; flex-direction: column; gap: 8px; }
+    .persona-features li { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
+    .persona-features li::before { content: ''; width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%; }
+    @media (max-width: 1024px) { .personas-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; } }
+</style>

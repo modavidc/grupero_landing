@@ -1,0 +1,195 @@
+---
+import HelpLayout from '../../layouts/HelpLayout.astro';
+---
+
+<HelpLayout title="Importar Chats" description="Guia completa para exportar e importar conversaciones de WhatsApp a Grupero.">
+
+    <section class="help-article">
+        <nav class="breadcrumb">
+            <a href="/ayuda">Centro de Ayuda</a>
+            <span>/</span>
+            <span>Importar Chats</span>
+        </nav>
+
+        <h1>Importar Chats de WhatsApp</h1>
+        <p class="article-meta">Todo lo que necesitas saber para traer tus conversaciones a Grupero</p>
+
+        <div class="help-content">
+
+            <h2 id="como-exportar">Como exportar tu chat de WhatsApp</h2>
+            <p>El primer paso es exportar la conversacion desde WhatsApp. El proceso es ligeramente diferente en Android e iPhone.</p>
+
+            <h3>En Android</h3>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number"></div>
+                    <div class="step-content">
+                        <h4>Abre el grupo en WhatsApp</h4>
+                        <p>Ve al chat del grupo que quieres analizar</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number"></div>
+                    <div class="step-content">
+                        <h4>Abre el menu</h4>
+                        <p>Toca los tres puntos verticales en la esquina superior derecha</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number"></div>
+                    <div class="step-content">
+                        <h4>Selecciona Mas > Exportar chat</h4>
+                        <p>Encontraras la opcion en el submenu "Mas"</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number"></div>
+                    <div class="step-content">
+                        <h4>Elige "Sin archivos"</h4>
+                        <p>Esto exporta solo los mensajes de texto, mas rapido y ligero</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number"></div>
+                    <div class="step-content">
+                        <h4>Comparte a Grupero</h4>
+                        <p>Selecciona Grupero en la lista de apps, o guarda el archivo .zip</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>En iPhone</h3>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number"></div>
+                    <div class="step-content">
+                        <h4>Abre el grupo en WhatsApp</h4>
+                        <p>Ve al chat del grupo que quieres analizar</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number"></div>
+                    <div class="step-content">
+                        <h4>Toca el nombre del grupo</h4>
+                        <p>En la parte superior de la conversacion</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number"></div>
+                    <div class="step-content">
+                        <h4>Desliza hacia abajo</h4>
+                        <p>Busca la opcion "Exportar chat"</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number"></div>
+                    <div class="step-content">
+                        <h4>Elige "Sin archivos"</h4>
+                        <p>Solo exporta mensajes de texto</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number"></div>
+                    <div class="step-content">
+                        <h4>Comparte a Grupero</h4>
+                        <p>Busca Grupero en la hoja de compartir</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 id="formatos">Formatos de archivo soportados</h2>
+            <p>Grupero puede leer los siguientes formatos:</p>
+
+            <ul>
+                <li><strong>.zip:</strong> El formato por defecto de WhatsApp. Contiene un archivo .txt dentro.</li>
+                <li><strong>.txt:</strong> Archivo de texto plano con los mensajes exportados.</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Tip:</strong> El archivo .zip es mejor porque conserva la codificacion correcta de emojis y caracteres especiales.</p>
+            </div>
+
+            <h2 id="deteccion-formato">Deteccion automatica de formato</h2>
+            <p>Grupero detecta automaticamente el formato de fecha usado en la exportacion:</p>
+
+            <ul>
+                <li><strong>DD/MM/YYYY:</strong> Formato europeo (31/12/2024)</li>
+                <li><strong>MM/DD/YYYY:</strong> Formato americano (12/31/2024)</li>
+                <li><strong>YYYY-MM-DD:</strong> Formato ISO (2024-12-31)</li>
+                <li><strong>Formatos de hora:</strong> 12h (AM/PM) y 24h</li>
+            </ul>
+
+            <p>No necesitas configurar nada, Grupero lo detecta solo.</p>
+
+            <h2 id="limite">Limite de 40,000 mensajes</h2>
+            <p>WhatsApp tiene un limite de <strong>40,000 mensajes</strong> por exportacion. Esto significa:</p>
+
+            <ul>
+                <li>En grupos muy activos, solo obtendras los ultimos meses</li>
+                <li>En grupos menos activos, podras tener anos de historial</li>
+                <li>Los mensajes mas antiguos no se incluyen en la exportacion</li>
+            </ul>
+
+            <div class="info-box warning">
+                <p><strong>Importante:</strong> Este limite es de WhatsApp, no de Grupero. No hay forma de exportar mas mensajes.</p>
+            </div>
+
+            <h2 id="actualizar">Actualizar un grupo existente</h2>
+            <p>Puedes reimportar un grupo para actualizar sus estadisticas:</p>
+
+            <ol>
+                <li>Exporta el chat nuevamente desde WhatsApp</li>
+                <li>Importalo en Grupero</li>
+                <li>Grupero detectara que ya existe y te preguntara si quieres actualizar</li>
+                <li>Selecciona "Actualizar" para agregar los nuevos mensajes</li>
+            </ol>
+
+            <p>Los datos anteriores se conservan y se agregan los nuevos mensajes.</p>
+
+            <h2 id="compartir-directo">Compartir directamente desde WhatsApp</h2>
+            <p>La forma mas facil de importar es usar la funcion "Compartir" de WhatsApp:</p>
+
+            <ol>
+                <li>Cuando exportes el chat, selecciona Grupero como destino</li>
+                <li>Grupero se abrira automaticamente</li>
+                <li>El analisis comenzara de inmediato</li>
+            </ol>
+
+            <p>No necesitas guardar el archivo en ningun lado.</p>
+
+            <h2 id="problemas">Problemas al importar</h2>
+            <p>Si tienes problemas, revisa estos puntos:</p>
+
+            <ul>
+                <li><strong>Archivo muy grande:</strong> Grupos con muchos mensajes pueden tardar mas. Ten paciencia.</li>
+                <li><strong>Archivo corrupto:</strong> Intenta exportar nuevamente desde WhatsApp.</li>
+                <li><strong>Formato no reconocido:</strong> Asegurate de que el archivo viene de WhatsApp.</li>
+                <li><strong>Sin mensajes:</strong> Verifica que el chat tenga mensajes antes de exportar.</li>
+            </ul>
+
+            <p>Si el problema persiste, visita nuestra seccion de <a href="/ayuda/errores-comunes">errores comunes</a>.</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>Articulos relacionados</h3>
+            <div class="related-list">
+                <a href="/ayuda/primeros-pasos" class="related-item">
+                    <span>🚀</span> Primeros pasos con Grupero
+                </a>
+                <a href="/ayuda/errores-comunes" class="related-item">
+                    <span>🔧</span> Errores comunes al importar
+                </a>
+                <a href="/ayuda/privacidad-seguridad" class="related-item">
+                    <span>🔒</span> Privacidad de tus datos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="help-cta">
+        <h2>¿Tienes dudas?</h2>
+        <p>Estamos aqui para ayudarte</p>
+        <a href="/contacto" class="btn">Contactar soporte</a>
+    </section>
+
+</HelpLayout>

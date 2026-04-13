@@ -1,0 +1,83 @@
+---
+import HelpLayout from '../layouts/HelpLayout.astro';
+---
+
+<HelpLayout title="Politica de Privacidad" description="Como protegemos tu privacidad en Grupero.">
+
+    <section class="help-article">
+        <nav class="breadcrumb">
+            <a href="/">Inicio</a>
+            <span>/</span>
+            <span>Privacidad</span>
+        </nav>
+
+        <h1>Politica de Privacidad</h1>
+        <p class="article-meta">Ultima actualizacion: Abril 2026</p>
+
+        <div class="help-content">
+            <div class="info-box">
+                <p><strong>Resumen:</strong> Tus conversaciones nunca salen de tu dispositivo. Grupero procesa todo localmente. No tenemos acceso a tus mensajes.</p>
+            </div>
+
+            <h2>Informacion que NO recopilamos</h2>
+            <ul>
+                <li>Contenido de tus conversaciones de WhatsApp</li>
+                <li>Nombres o numeros de telefono de los miembros del grupo</li>
+                <li>Archivos multimedia compartidos</li>
+                <li>Tu cuenta de WhatsApp o credenciales</li>
+            </ul>
+
+            <h2>Informacion que SI recopilamos</h2>
+            <p>Recopilamos datos anonimos y agregados para mejorar la app:</p>
+            <ul>
+                <li><strong>Informacion del dispositivo:</strong> Modelo, version de Android/iOS</li>
+                <li><strong>Datos de uso:</strong> Funciones mas utilizadas, errores</li>
+                <li><strong>Informacion de compra:</strong> Si tienes suscripcion Pro</li>
+            </ul>
+
+            <h2>Procesamiento local</h2>
+            <p>Cuando importas un chat de WhatsApp:</p>
+            <ul>
+                <li>El archivo se procesa <strong>unicamente en tu dispositivo</strong></li>
+                <li>Los resultados del analisis se guardan localmente</li>
+                <li>Puedes borrar todos los datos en cualquier momento desde Configuracion</li>
+            </ul>
+
+            <h2>Funciones con IA (Pro)</h2>
+            <p>Las funciones de resumen con IA envian fragmentos de texto a servicios de terceros (OpenAI/Anthropic) para procesamiento. Estos fragmentos:</p>
+            <ul>
+                <li>Se anonimizan antes de enviarse (nombres reemplazados por identificadores)</li>
+                <li>No se almacenan por los proveedores de IA</li>
+                <li>Solo se usan para generar el resumen solicitado</li>
+            </ul>
+
+            <h2>Tus derechos</h2>
+            <p>Puedes solicitar:</p>
+            <ul>
+                <li>Acceso a los datos que tenemos sobre ti</li>
+                <li>Eliminacion de tus datos</li>
+                <li>Exportacion de tus datos</li>
+            </ul>
+            <p>Contacta a <a href="mailto:privacidad@grupero.app">privacidad@grupero.app</a> para ejercer estos derechos.</p>
+
+            <h2>Contacto</h2>
+            <p>Para preguntas sobre privacidad: <a href="mailto:privacidad@grupero.app">privacidad@grupero.app</a></p>
+        </div>
+
+        <div class="related-articles">
+            <h3>Documentos relacionados</h3>
+            <div class="related-list">
+                <a href="/terminos" class="related-item">
+                    <span>📜</span> Terminos de Servicio
+                </a>
+                <a href="/cookies" class="related-item">
+                    <span>🍪</span> Politica de Cookies
+                </a>
+                <a href="/ayuda/privacidad-seguridad" class="related-item">
+                    <span>🔒</span> Mas sobre privacidad
+                </a>
+            </div>
+        </div>
+    </section>
+
+</HelpLayout>

@@ -1,0 +1,152 @@
+---
+import HelpLayout from '../../layouts/HelpLayout.astro';
+---
+
+<HelpLayout title="Exportar y Compartir" description="Como generar reportes PDF, exportar datos a CSV y compartir analisis con otros.">
+
+    <section class="help-article">
+        <nav class="breadcrumb">
+            <a href="/ayuda">Centro de Ayuda</a>
+            <span>/</span>
+            <span>Exportar y Compartir</span>
+        </nav>
+
+        <h1>Exportar y Compartir</h1>
+        <p class="article-meta">Genera reportes y comparte tus analisis</p>
+
+        <div class="help-content">
+
+            <h2 id="pdf">Exportar a PDF</h2>
+            <p>Genera un reporte completo en formato PDF con todas las estadisticas del grupo.</p>
+
+            <h3>El PDF incluye:</h3>
+            <ul>
+                <li>Resumen general del grupo</li>
+                <li>Ranking de participacion</li>
+                <li>Graficos de actividad</li>
+                <li>Score de salud</li>
+                <li>Top emojis y palabras</li>
+                <li>Estadisticas de eventos (si aplica)</li>
+            </ul>
+
+            <h3>Como exportar:</h3>
+            <ol>
+                <li>Abre el grupo analizado</li>
+                <li>Toca el menu (tres puntos)</li>
+                <li>Selecciona "Exportar a PDF"</li>
+                <li>Elige donde guardar el archivo</li>
+            </ol>
+
+            <div class="info-box">
+                <p><strong>Tip:</strong> El PDF es ideal para compartir con otros admins o miembros del grupo.</p>
+            </div>
+
+            <h2 id="csv">Exportar a CSV</h2>
+            <p>Exporta los datos en bruto para analizarlos en Excel o Google Sheets.</p>
+
+            <h3>Datos incluidos:</h3>
+            <ul>
+                <li>Lista de participantes con todas sus metricas</li>
+                <li>Mensajes por dia</li>
+                <li>Actividad por hora</li>
+                <li>Eventos detectados</li>
+            </ul>
+
+            <h3>Como exportar:</h3>
+            <ol>
+                <li>Abre el grupo analizado</li>
+                <li>Toca el menu (tres puntos)</li>
+                <li>Selecciona "Exportar a CSV"</li>
+                <li>Elige que datos quieres exportar</li>
+                <li>Guarda el archivo</li>
+            </ol>
+
+            <p>Puedes abrir el CSV en:</p>
+            <ul>
+                <li>Microsoft Excel</li>
+                <li>Google Sheets</li>
+                <li>Numbers (Mac)</li>
+                <li>LibreOffice Calc</li>
+            </ul>
+
+            <h2 id="compartir">Compartir Analisis</h2>
+            <p>Comparte el reporte directamente por WhatsApp, email u otras apps.</p>
+
+            <h3>Opciones de compartir:</h3>
+            <ul>
+                <li><strong>PDF completo:</strong> Envia el documento con todas las estadisticas</li>
+                <li><strong>Imagen resumen:</strong> Una imagen con los datos principales</li>
+                <li><strong>Texto:</strong> Un resumen en texto plano</li>
+            </ul>
+
+            <h3>Como compartir:</h3>
+            <ol>
+                <li>Abre el grupo analizado</li>
+                <li>Toca el icono de compartir</li>
+                <li>Elige el formato (PDF, imagen, texto)</li>
+                <li>Selecciona la app de destino</li>
+            </ol>
+
+            <h2 id="privacidad-compartir">Privacidad al Compartir</h2>
+            <p>Ten en cuenta al compartir:</p>
+
+            <ul>
+                <li>Los reportes incluyen nombres de participantes</li>
+                <li>Las metricas revelan comportamiento de los miembros</li>
+                <li>Considera si todos estarian de acuerdo</li>
+            </ul>
+
+            <div class="info-box warning">
+                <p><strong>Recomendacion:</strong> Antes de compartir estadisticas, considera consultar con el grupo o anonimizar los datos.</p>
+            </div>
+
+            <h2 id="formatos">Comparacion de Formatos</h2>
+
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background: #f3f4f6;">
+                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e5e7eb;">Formato</th>
+                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e5e7eb;">Mejor para</th>
+                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e5e7eb;">Incluye graficos</th>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;"><strong>PDF</strong></td>
+                    <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Reportes visuales, compartir</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Si</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;"><strong>CSV</strong></td>
+                    <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Analisis avanzado, Excel</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">No</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;"><strong>Imagen</strong></td>
+                    <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Redes sociales, WhatsApp</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Si (resumen)</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div class="related-articles">
+            <h3>Articulos relacionados</h3>
+            <div class="related-list">
+                <a href="/ayuda/analisis-estadisticas" class="related-item">
+                    <span>📊</span> Entender las estadisticas
+                </a>
+                <a href="/ayuda/privacidad-seguridad" class="related-item">
+                    <span>🔒</span> Privacidad de datos
+                </a>
+                <a href="/ayuda/cuenta-suscripcion" class="related-item">
+                    <span>👤</span> Funciones Pro
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="help-cta">
+        <h2>¿Necesitas reportes avanzados?</h2>
+        <p>Grupero Pro incluye exportacion ilimitada y mas formatos</p>
+        <a href="/#precios" class="btn">Ver planes</a>
+    </section>
+
+</HelpLayout>

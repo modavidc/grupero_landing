@@ -1,0 +1,147 @@
+---
+
+---
+
+<section class="social-proof">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-value">
+                    <span class="stat-number" data-target="2847">0</span>
+                </div>
+                <span class="stat-label">Grupos analizados</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-value">
+                    <span class="stat-number" data-target="156">0</span>
+                    <span class="stat-suffix">K</span>
+                </div>
+                <span class="stat-label">Mensajes procesados</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-value">
+                    <span class="stat-number" data-target="4.8">0</span>
+                    <span class="stat-suffix">★</span>
+                </div>
+                <span class="stat-label">Rating en Play Store</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .social-proof {
+        padding: 48px 0;
+        background: #f8faf8;
+        border-top: 1px solid #e5e7eb;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .stats-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-value {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #128C3E;
+        line-height: 1;
+    }
+
+    .stat-suffix {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #128C3E;
+        margin-left: 2px;
+    }
+
+    .stat-label {
+        font-size: 0.95rem;
+        color: #6b7280;
+        margin-top: 8px;
+    }
+
+    .stat-divider {
+        width: 1px;
+        height: 48px;
+        background: #d1d5db;
+    }
+
+    @media (max-width: 640px) {
+        .stats-grid {
+            gap: 32px;
+        }
+
+        .stat-divider {
+            display: none;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+        }
+
+        .stat-suffix {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+<script>
+    // Animate numbers when in view
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const animateNumber = (element: HTMLElement) => {
+        const target = element.dataset.target;
+        if (!target) return;
+
+        const isDecimal = target.includes('.');
+        const targetNum = parseFloat(target);
+        const duration = 2000;
+        const steps = 60;
+        const stepDuration = duration / steps;
+        let current = 0;
+        const increment = targetNum / steps;
+
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= targetNum) {
+                current = targetNum;
+                clearInterval(timer);
+            }
+            element.textContent = isDecimal ? current.toFixed(1) : Math.floor(current).toLocaleString();
+        }, stepDuration);
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const numbers = entry.target.querySelectorAll('.stat-number');
+                numbers.forEach(num => animateNumber(num as HTMLElement));
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const section = document.querySelector('.social-proof');
+        if (section) observer.observe(section);
+    });
+</script>

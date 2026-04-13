@@ -1,0 +1,181 @@
+---
+import HelpLayout from '../../layouts/HelpLayout.astro';
+---
+
+<HelpLayout title="Analisis y Estadisticas" description="Entiende cada metrica, grafico y dato que Grupero te muestra sobre tu grupo.">
+
+    <section class="help-article">
+        <nav class="breadcrumb">
+            <a href="/ayuda">Centro de Ayuda</a>
+            <span>/</span>
+            <span>Analisis y Estadisticas</span>
+        </nav>
+
+        <h1>Analisis y Estadisticas</h1>
+        <p class="article-meta">Todo lo que necesitas saber sobre las metricas de Grupero</p>
+
+        <div class="help-content">
+
+            <h2 id="participacion">Ranking de Participacion</h2>
+            <p>El ranking muestra a todos los miembros ordenados por su nivel de actividad en el grupo.</p>
+
+            <h3>Metricas incluidas:</h3>
+            <ul>
+                <li><strong>Total de mensajes:</strong> Cuantos mensajes ha enviado cada persona</li>
+                <li><strong>Porcentaje:</strong> Que porcentaje del total representa</li>
+                <li><strong>Palabras:</strong> Promedio de palabras por mensaje</li>
+                <li><strong>Caracteres:</strong> Total de caracteres escritos</li>
+            </ul>
+
+            <h3>Clasificacion de actividad:</h3>
+            <ul>
+                <li><strong>Muy activo:</strong> Top 10% de participacion</li>
+                <li><strong>Activo:</strong> Participa regularmente</li>
+                <li><strong>Esporadico:</strong> Escribe de vez en cuando</li>
+                <li><strong>Observador silencioso:</strong> Casi no escribe</li>
+                <li><strong>Inactivo:</strong> No ha escrito en mucho tiempo</li>
+            </ul>
+
+            <h2 id="heatmap">Heatmap de Actividad</h2>
+            <p>El mapa de calor muestra <strong>cuando</strong> esta mas activo el grupo.</p>
+
+            <ul>
+                <li><strong>Eje horizontal:</strong> Dias de la semana (lunes a domingo)</li>
+                <li><strong>Eje vertical:</strong> Horas del dia (0-23)</li>
+                <li><strong>Colores:</strong> Mas oscuro = mas mensajes en esa hora/dia</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Uso:</strong> Identifica las mejores horas para enviar mensajes importantes o convocar eventos.</p>
+            </div>
+
+            <h2 id="tendencia">Mensajes por Dia</h2>
+            <p>Grafico de linea que muestra la evolucion del grupo en el tiempo:</p>
+
+            <ul>
+                <li><strong>Picos:</strong> Dias con mucha actividad (eventos, discusiones)</li>
+                <li><strong>Valles:</strong> Dias con poca actividad</li>
+                <li><strong>Tendencia:</strong> Si el grupo esta creciendo o decayendo</li>
+            </ul>
+
+            <h2 id="salud">Score de Salud (0-100)</h2>
+            <p>Una puntuacion general que resume el estado del grupo.</p>
+
+            <h3>Factores que considera:</h3>
+            <ul>
+                <li><strong>Distribucion de participacion:</strong> Si muchos o pocos escriben</li>
+                <li><strong>Regularidad:</strong> Si hay actividad constante</li>
+                <li><strong>Engagement:</strong> Si la gente interactua entre si</li>
+                <li><strong>Respuestas:</strong> Tiempo promedio de respuesta</li>
+            </ul>
+
+            <h3>Interpretacion:</h3>
+            <ul>
+                <li><strong>80-100:</strong> Grupo muy saludable y activo</li>
+                <li><strong>60-79:</strong> Grupo saludable con areas de mejora</li>
+                <li><strong>40-59:</strong> Grupo que necesita atencion</li>
+                <li><strong>0-39:</strong> Grupo en riesgo de inactividad</li>
+            </ul>
+
+            <h2 id="semaforo">Semaforo de Participacion</h2>
+            <p>Clasifica a los miembros en tres categorias visuales:</p>
+
+            <ul>
+                <li><strong>Verde (Activos):</strong> Participan regularmente</li>
+                <li><strong>Amarillo (En riesgo):</strong> Han reducido su actividad</li>
+                <li><strong>Rojo (Inactivos):</strong> No escriben desde hace tiempo</li>
+            </ul>
+
+            <h2 id="emojis">Emojis y Palabras Frecuentes</h2>
+
+            <h3>Nube de Emojis</h3>
+            <p>Muestra los emojis mas usados en el grupo, con tamano proporcional a su frecuencia.</p>
+
+            <h3>Palabras Frecuentes</h3>
+            <p>Las palabras mas usadas, <strong>excluyendo stopwords</strong> (el, la, de, que, etc.).</p>
+
+            <div class="info-box">
+                <p><strong>Tip:</strong> Las palabras frecuentes revelan los temas principales del grupo.</p>
+            </div>
+
+            <h2 id="sentimiento">Analisis de Sentimiento</h2>
+            <p>Clasifica los mensajes en:</p>
+
+            <ul>
+                <li><strong>Positivo:</strong> Mensajes con tono alegre, de acuerdo, entusiasta</li>
+                <li><strong>Neutral:</strong> Mensajes informativos o sin carga emocional</li>
+                <li><strong>Negativo:</strong> Mensajes con quejas, desacuerdo, frustracion</li>
+            </ul>
+
+            <p>El porcentaje general indica el "mood" predominante del grupo.</p>
+
+            <h2 id="iniciadores">Iniciadores de Conversacion</h2>
+            <p>Identifica quien <strong>empieza</strong> las conversaciones mas frecuentemente.</p>
+
+            <p>Un mensaje "inicia" conversacion si:</p>
+            <ul>
+                <li>Es el primer mensaje del dia</li>
+                <li>Han pasado mas de 4 horas desde el ultimo mensaje</li>
+            </ul>
+
+            <h2 id="tiempo-respuesta">Tiempo de Respuesta</h2>
+            <p>Promedio de tiempo que tarda cada persona en responder cuando le mencionan o cuando hay una pregunta.</p>
+
+            <ul>
+                <li><strong>Rapido:</strong> Menos de 10 minutos</li>
+                <li><strong>Normal:</strong> 10 minutos a 1 hora</li>
+                <li><strong>Lento:</strong> Mas de 1 hora</li>
+            </ul>
+
+            <h2 id="menciones">Matriz de Menciones</h2>
+            <p>Muestra quien menciona a quien y con que frecuencia.</p>
+
+            <ul>
+                <li>Identifica "parejas" que interactuan mucho</li>
+                <li>Ve quien es mas mencionado (populares)</li>
+                <li>Detecta subgrupos dentro del grupo</li>
+            </ul>
+
+            <h2 id="links">Links Compartidos</h2>
+            <p>Categoriza los enlaces compartidos por plataforma:</p>
+
+            <ul>
+                <li>YouTube</li>
+                <li>Instagram</li>
+                <li>TikTok</li>
+                <li>Spotify</li>
+                <li>Twitter/X</li>
+                <li>Noticias</li>
+                <li>Otros</li>
+            </ul>
+
+            <h2 id="racha">Racha mas Larga</h2>
+            <p>Dias consecutivos con al menos un mensaje en el grupo.</p>
+
+            <p>Una racha larga indica un grupo muy activo y comprometido.</p>
+
+        </div>
+
+        <div class="related-articles">
+            <h3>Articulos relacionados</h3>
+            <div class="related-list">
+                <a href="/ayuda/eventos-convocatorias" class="related-item">
+                    <span>📅</span> Deteccion de eventos
+                </a>
+                <a href="/ayuda/grupos-deportivos" class="related-item">
+                    <span>⚽</span> Metricas para grupos deportivos
+                </a>
+                <a href="/ayuda/exportar-compartir" class="related-item">
+                    <span>📤</span> Exportar tus estadisticas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="help-cta">
+        <h2>¿Tienes mas preguntas?</h2>
+        <p>Estamos aqui para ayudarte a entender tus datos</p>
+        <a href="/contacto" class="btn">Contactar soporte</a>
+    </section>
+
+</HelpLayout>

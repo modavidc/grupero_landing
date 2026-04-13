@@ -1,0 +1,165 @@
+---
+import HelpLayout from '../../layouts/HelpLayout.astro';
+---
+
+<HelpLayout title="Grupos Deportivos" description="Funciones especiales para grupos de futbol, basketball y otros deportes de equipo.">
+
+    <section class="help-article">
+        <nav class="breadcrumb">
+            <a href="/ayuda">Centro de Ayuda</a>
+            <span>/</span>
+            <span>Grupos Deportivos</span>
+        </nav>
+
+        <h1>Grupos Deportivos</h1>
+        <p class="article-meta">Metricas especializadas para equipos y grupos de deporte</p>
+
+        <div class="help-content">
+
+            <h2 id="deteccion-automatica">Deteccion Automatica</h2>
+            <p>Grupero detecta automaticamente si tu grupo es de un deporte especifico:</p>
+
+            <ul>
+                <li><strong>Futbol:</strong> Menciones de partido, cancha, portero, gol</li>
+                <li><strong>Basketball:</strong> Menciones de canasta, triple, tablero</li>
+                <li><strong>Voleyball:</strong> Menciones de red, set, saque</li>
+                <li><strong>Tennis:</strong> Menciones de raqueta, game, set</li>
+                <li><strong>Otros:</strong> Cualquier actividad deportiva regular</li>
+            </ul>
+
+            <p>Cuando detecta un grupo deportivo, activa metricas especiales.</p>
+
+            <h2 id="clasificacion">Clasificacion de Jugadores</h2>
+            <p>Basandose en el historial de confirmaciones y asistencia:</p>
+
+            <h3>Los Fijos</h3>
+            <ul>
+                <li>Confirman siempre o casi siempre</li>
+                <li>Responden rapido</li>
+                <li>Asisten cuando confirman</li>
+                <li>Son el nucleo del equipo</li>
+            </ul>
+
+            <h3>Los Probables</h3>
+            <ul>
+                <li>Confirman frecuentemente</li>
+                <li>A veces tardan en responder</li>
+                <li>Generalmente cumplen</li>
+            </ul>
+
+            <h3>Los Riesgosos</h3>
+            <ul>
+                <li>Confirman a veces</li>
+                <li>Han cancelado en el pasado</li>
+                <li>Dependen de otras cosas para ir</li>
+            </ul>
+
+            <h3>Los Chancletas</h3>
+            <ul>
+                <li>Rara vez confirman</li>
+                <li>Cuando confirman, a veces no llegan</li>
+                <li>Dificiles de contar para el quorum</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Uso:</strong> Cuando necesitas armar un equipo, empieza por Los Fijos y Probables.</p>
+            </div>
+
+            <h2 id="ghost">Ghost Score</h2>
+            <p>Mide la tendencia a confirmar pero <strong>no asistir</strong>:</p>
+
+            <ul>
+                <li><strong>0-20%:</strong> Confiable, casi siempre cumple</li>
+                <li><strong>21-40%:</strong> Ocasionalmente no llega</li>
+                <li><strong>41-60%:</strong> Riesgo de no asistir</li>
+                <li><strong>61%+:</strong> Ghost frecuente, no confies</li>
+            </ul>
+
+            <p>El Ghost Score se calcula comparando confirmaciones vs menciones de asistencia real.</p>
+
+            <h2 id="fill-rate">Fill Rate (Tasa de Llenado)</h2>
+            <p>Para cada evento/partido, que porcentaje del cupo se lleno:</p>
+
+            <ul>
+                <li><strong>100%:</strong> Cupo completo</li>
+                <li><strong>80-99%:</strong> Casi completo</li>
+                <li><strong>60-79%:</strong> Necesito mas gente</li>
+                <li><strong>&lt;60%:</strong> Dificil completar el equipo</li>
+            </ul>
+
+            <p>El promedio historico te dice que tan facil es armar partidos en tu grupo.</p>
+
+            <h2 id="velocidad">Velocidad de Llenado</h2>
+            <p>Cuanto tiempo pasa desde que se convoca hasta que se llena el cupo:</p>
+
+            <ul>
+                <li><strong>Rapido:</strong> Menos de 2 horas</li>
+                <li><strong>Normal:</strong> 2-12 horas</li>
+                <li><strong>Lento:</strong> 12-24 horas</li>
+                <li><strong>Muy lento:</strong> Mas de 24 horas</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Tip:</strong> Si tu grupo es lento para llenar, convoca con mas anticipacion.</p>
+            </div>
+
+            <h2 id="listas">Parser de Listas</h2>
+            <p>Grupero reconoce automaticamente listas de confirmados:</p>
+
+            <pre><code>1. Juan
+2. Maria
+3. Pedro
+4. Ana</code></pre>
+
+            <p>O formatos como:</p>
+
+            <pre><code>Confirmados:
+- Juan
+- Maria
+- Pedro</code></pre>
+
+            <p>Esto ayuda a contar rapidamente cuantos van.</p>
+
+            <h2 id="horarios">Mejores Horarios</h2>
+            <p>Basandose en el historial, Grupero sugiere:</p>
+
+            <ul>
+                <li>Que dia de la semana tiene mas asistencia</li>
+                <li>A que hora responde mas gente</li>
+                <li>Cuando convocar para llenar rapido</li>
+            </ul>
+
+            <h2 id="quorum">Alerta de Quorum</h2>
+            <p>Si el grupo tiene un numero minimo de jugadores (ej: 10 para futbol 5vs5), Grupero te avisa:</p>
+
+            <ul>
+                <li>Cuantos confirmados hay</li>
+                <li>Cuantos faltan para el minimo</li>
+                <li>Probabilidad de completar basado en historial</li>
+            </ul>
+
+        </div>
+
+        <div class="related-articles">
+            <h3>Articulos relacionados</h3>
+            <div class="related-list">
+                <a href="/ayuda/eventos-convocatorias" class="related-item">
+                    <span>📅</span> Deteccion de eventos general
+                </a>
+                <a href="/ayuda/analisis-estadisticas" class="related-item">
+                    <span>📊</span> Otras estadisticas
+                </a>
+                <a href="/ayuda/exportar-compartir" class="related-item">
+                    <span>📤</span> Exportar reportes
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="help-cta">
+        <h2>¿Administras un grupo deportivo?</h2>
+        <p>Grupero te ayuda a organizar mejores partidos</p>
+        <a href="/#descargar" class="btn">Descargar Grupero</a>
+    </section>
+
+</HelpLayout>

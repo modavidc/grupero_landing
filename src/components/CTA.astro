@@ -1,0 +1,87 @@
+---
+
+---
+
+<section id="descargar" class="cta">
+    <div class="container">
+        <h2>Deja de adivinar. Empieza a saber.</h2>
+        <p>Descarga Grupero y transforma cómo manejas tus grupos de WhatsApp.</p>
+        <div class="cta-buttons">
+            <a href="#" class="store-badge">
+                <img src="/images/download-google.png" alt="Disponible en Google Play" />
+            </a>
+            <a href="#" class="store-badge disabled">
+                <img src="/images/download-ios.png" alt="Próximamente en App Store" />
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .cta {
+        padding: 100px 0;
+        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+        text-align: center;
+    }
+
+    .cta h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 16px;
+    }
+
+    .cta p {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 32px;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .store-badge {
+        display: inline-block;
+        transition: all 0.2s ease;
+    }
+
+    .store-badge img {
+        height: 75px;
+        width: auto;
+        max-width: 255px;
+        object-fit: contain;
+    }
+
+    .store-badge:hover {
+        transform: translateY(-3px);
+    }
+
+    .store-badge.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .store-badge.disabled:hover {
+        transform: none;
+    }
+
+    @media (max-width: 480px) {
+        .cta-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+        }
+
+        .store-badge img {
+            height: 52px;
+            max-width: 180px;
+        }
+    }
+</style>

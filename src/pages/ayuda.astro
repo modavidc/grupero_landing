@@ -1,0 +1,245 @@
+---
+import HelpLayout from '../layouts/HelpLayout.astro';
+---
+
+<HelpLayout title="Centro de Ayuda" description="Encuentra respuestas a tus preguntas sobre Grupero. Guias, tutoriales y solucion de problemas.">
+
+    <!-- Hero con buscador -->
+    <section class="help-hero">
+        <div class="help-hero-content">
+            <h1>Centro de Ayuda</h1>
+            <p>Encuentra respuestas, aprende a usar Grupero y resuelve cualquier duda</p>
+
+            <div class="search-container">
+                <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <input type="text" class="search-box" id="helpSearch" placeholder="Buscar en el centro de ayuda..." autocomplete="off">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+
+            <div class="quick-links">
+                <a href="/ayuda/primeros-pasos" class="quick-link">Primeros pasos</a>
+                <a href="/ayuda/importar-chat" class="quick-link">Importar chat</a>
+                <a href="/ayuda/errores-comunes" class="quick-link">Errores comunes</a>
+                <a href="/ayuda/privacidad-seguridad" class="quick-link">Privacidad</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorias -->
+    <section class="help-categories">
+        <h2 class="help-section-title">Explorar por categoria</h2>
+
+        <div class="categories-grid">
+            <a href="/ayuda/primeros-pasos" class="category-card cat-getting-started">
+                <div class="category-icon">🚀</div>
+                <h3>Primeros Pasos</h3>
+                <p>Aprende lo basico para empezar a usar Grupero y analizar tu primer grupo.</p>
+                <span class="category-articles">5 articulos</span>
+            </a>
+
+            <a href="/ayuda/importar-chat" class="category-card cat-import">
+                <div class="category-icon">📥</div>
+                <h3>Importar Chats</h3>
+                <p>Todo sobre como exportar e importar tus conversaciones de WhatsApp.</p>
+                <span class="category-articles">6 articulos</span>
+            </a>
+
+            <a href="/ayuda/analisis-estadisticas" class="category-card cat-analysis">
+                <div class="category-icon">📊</div>
+                <h3>Analisis y Estadisticas</h3>
+                <p>Entiende cada metrica, grafico y dato que Grupero te muestra.</p>
+                <span class="category-articles">8 articulos</span>
+            </a>
+
+            <a href="/ayuda/eventos-convocatorias" class="category-card cat-events">
+                <div class="category-icon">📅</div>
+                <h3>Eventos y Convocatorias</h3>
+                <p>Como funciona la deteccion de eventos, confirmaciones y asistencia.</p>
+                <span class="category-articles">5 articulos</span>
+            </a>
+
+            <a href="/ayuda/grupos-deportivos" class="category-card cat-sports">
+                <div class="category-icon">⚽</div>
+                <h3>Grupos Deportivos</h3>
+                <p>Funciones especiales para grupos de futbol, basket y otros deportes.</p>
+                <span class="category-articles">6 articulos</span>
+            </a>
+
+            <a href="/ayuda/exportar-compartir" class="category-card cat-export">
+                <div class="category-icon">📤</div>
+                <h3>Exportar y Compartir</h3>
+                <p>Genera reportes PDF, exporta a CSV y comparte tus analisis.</p>
+                <span class="category-articles">4 articulos</span>
+            </a>
+
+            <a href="/ayuda/privacidad-seguridad" class="category-card cat-privacy">
+                <div class="category-icon">🔒</div>
+                <h3>Privacidad y Seguridad</h3>
+                <p>Como protegemos tus datos y por que Grupero es 100% seguro.</p>
+                <span class="category-articles">4 articulos</span>
+            </a>
+
+            <a href="/ayuda/cuenta-suscripcion" class="category-card cat-account">
+                <div class="category-icon">👤</div>
+                <h3>Cuenta y Suscripcion</h3>
+                <p>Planes, pagos, cancelaciones y gestion de tu cuenta Pro.</p>
+                <span class="category-articles">5 articulos</span>
+            </a>
+
+            <a href="/ayuda/errores-comunes" class="category-card cat-errors">
+                <div class="category-icon">🔧</div>
+                <h3>Errores Comunes</h3>
+                <p>Soluciones a los problemas mas frecuentes que puedes encontrar.</p>
+                <span class="category-articles">8 articulos</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Articulos populares -->
+    <section class="popular-articles">
+        <div class="container">
+            <h2 class="help-section-title">Articulos populares</h2>
+
+            <div class="articles-list">
+                <a href="/ayuda/importar-chat#como-exportar" class="article-item">
+                    <div class="article-icon">📱</div>
+                    <div class="article-content">
+                        <h4>Como exportar mi chat de WhatsApp</h4>
+                        <p>Guia paso a paso para Android y iPhone</p>
+                    </div>
+                </a>
+
+                <a href="/ayuda/errores-comunes#archivo-no-reconocido" class="article-item">
+                    <div class="article-icon">⚠️</div>
+                    <div class="article-content">
+                        <h4>Error: Archivo no reconocido</h4>
+                        <p>Que hacer cuando Grupero no puede leer tu chat</p>
+                    </div>
+                </a>
+
+                <a href="/ayuda/analisis-estadisticas#participacion" class="article-item">
+                    <div class="article-icon">👥</div>
+                    <div class="article-content">
+                        <h4>Como se calcula la participacion</h4>
+                        <p>Entender el ranking y las metricas de actividad</p>
+                    </div>
+                </a>
+
+                <a href="/ayuda/privacidad-seguridad#datos-locales" class="article-item">
+                    <div class="article-icon">🔐</div>
+                    <div class="article-content">
+                        <h4>Donde se guardan mis datos</h4>
+                        <p>Todo sobre privacidad y almacenamiento local</p>
+                    </div>
+                </a>
+
+                <a href="/ayuda/grupos-deportivos#clasificacion" class="article-item">
+                    <div class="article-icon">🏆</div>
+                    <div class="article-content">
+                        <h4>Clasificacion de jugadores</h4>
+                        <p>Los Fijos, Probables, Riesgosos y Chancletas</p>
+                    </div>
+                </a>
+
+                <a href="/ayuda/cuenta-suscripcion#cancelar" class="article-item">
+                    <div class="article-icon">💳</div>
+                    <div class="article-content">
+                        <h4>Como cancelar mi suscripcion Pro</h4>
+                        <p>Pasos para gestionar tu suscripcion</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="help-cta">
+        <h2>¿No encuentras lo que buscas?</h2>
+        <p>Nuestro equipo esta listo para ayudarte con cualquier pregunta</p>
+        <a href="/contacto" class="btn">Contactar soporte</a>
+    </section>
+
+</HelpLayout>
+
+<script>
+// Datos de busqueda
+const searchData = [
+    { title: "Como exportar mi chat de WhatsApp", category: "Importar", url: "/ayuda/importar-chat#como-exportar", keywords: "exportar chat whatsapp archivo zip txt" },
+    { title: "Formatos de archivo soportados", category: "Importar", url: "/ayuda/importar-chat#formatos", keywords: "formato archivo zip txt soportado" },
+    { title: "Error: Archivo no reconocido", category: "Errores", url: "/ayuda/errores-comunes#archivo-no-reconocido", keywords: "error archivo no reconocido problema" },
+    { title: "Error: El archivo esta vacio", category: "Errores", url: "/ayuda/errores-comunes#archivo-vacio", keywords: "error archivo vacio sin mensajes" },
+    { title: "La app se cierra inesperadamente", category: "Errores", url: "/ayuda/errores-comunes#app-cierra", keywords: "crash cierra falla aplicacion" },
+    { title: "No aparecen todos los mensajes", category: "Errores", url: "/ayuda/errores-comunes#mensajes-faltantes", keywords: "mensajes faltan menos 40000" },
+    { title: "Ranking de participacion", category: "Analisis", url: "/ayuda/analisis-estadisticas#participacion", keywords: "ranking participacion activos mensajes" },
+    { title: "Heatmap de actividad", category: "Analisis", url: "/ayuda/analisis-estadisticas#heatmap", keywords: "heatmap calor hora dia actividad" },
+    { title: "Score de salud del grupo", category: "Analisis", url: "/ayuda/analisis-estadisticas#salud", keywords: "score salud grupo puntuacion" },
+    { title: "Emojis y palabras frecuentes", category: "Analisis", url: "/ayuda/analisis-estadisticas#emojis", keywords: "emojis palabras frecuentes nube" },
+    { title: "Deteccion de eventos", category: "Eventos", url: "/ayuda/eventos-convocatorias#deteccion", keywords: "eventos convocatorias detectar automatico" },
+    { title: "Confirmaciones RSVP", category: "Eventos", url: "/ayuda/eventos-convocatorias#confirmaciones", keywords: "confirmacion rsvp asistencia evento" },
+    { title: "Clasificacion de jugadores", category: "Deportes", url: "/ayuda/grupos-deportivos#clasificacion", keywords: "jugadores fijos probables riesgosos chancletas" },
+    { title: "Ghost score", category: "Deportes", url: "/ayuda/grupos-deportivos#ghost", keywords: "ghost score fantasma confirma no asiste" },
+    { title: "Exportar a PDF", category: "Exportar", url: "/ayuda/exportar-compartir#pdf", keywords: "exportar pdf reporte documento" },
+    { title: "Exportar a CSV", category: "Exportar", url: "/ayuda/exportar-compartir#csv", keywords: "exportar csv excel datos tabla" },
+    { title: "Donde se guardan mis datos", category: "Privacidad", url: "/ayuda/privacidad-seguridad#datos-locales", keywords: "datos guardan local privacidad seguro" },
+    { title: "Grupero es 100% offline", category: "Privacidad", url: "/ayuda/privacidad-seguridad#offline", keywords: "offline sin internet local privado" },
+    { title: "Plan gratuito vs Pro", category: "Cuenta", url: "/ayuda/cuenta-suscripcion#planes", keywords: "plan gratis pro precio diferencia" },
+    { title: "Como cancelar suscripcion", category: "Cuenta", url: "/ayuda/cuenta-suscripcion#cancelar", keywords: "cancelar suscripcion pro pago" },
+    { title: "Solicitar reembolso", category: "Cuenta", url: "/ayuda/cuenta-suscripcion#reembolso", keywords: "reembolso devolucion dinero pago" },
+    { title: "Primeros pasos con Grupero", category: "Inicio", url: "/ayuda/primeros-pasos", keywords: "empezar comenzar inicio tutorial basico" },
+    { title: "Limite de 40,000 mensajes", category: "Importar", url: "/ayuda/importar-chat#limite", keywords: "limite 40000 mensajes whatsapp" },
+    { title: "Actualizar un grupo existente", category: "Importar", url: "/ayuda/importar-chat#actualizar", keywords: "actualizar grupo reimportar nuevo" },
+];
+
+const searchInput = document.getElementById('helpSearch');
+const searchResults = document.getElementById('searchResults');
+
+searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase().trim();
+
+    if (query.length < 2) {
+        searchResults.classList.remove('active');
+        return;
+    }
+
+    const results = searchData.filter(item =>
+        item.title.toLowerCase().includes(query) ||
+        item.keywords.includes(query) ||
+        item.category.toLowerCase().includes(query)
+    ).slice(0, 6);
+
+    if (results.length > 0) {
+        searchResults.innerHTML = results.map(item => `
+            <a href="${item.url}" class="search-result-item">
+                <h4>${item.title}<span class="category-tag">${item.category}</span></h4>
+                <p>Ver articulo completo</p>
+            </a>
+        `).join('');
+        searchResults.classList.add('active');
+    } else {
+        searchResults.innerHTML = `
+            <div class="no-results">
+                <p>No se encontraron resultados para "${query}"</p>
+                <p style="margin-top: 8px; font-size: 0.875rem;">Intenta con otras palabras o <a href="/contacto" style="color: #128C3E;">contactanos</a></p>
+            </div>
+        `;
+        searchResults.classList.add('active');
+    }
+});
+
+// Cerrar resultados al hacer clic fuera
+document.addEventListener('click', (e) => {
+    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.classList.remove('active');
+    }
+});
+
+// Cerrar con Escape
+searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        searchResults.classList.remove('active');
+        searchInput.blur();
+    }
+});
+</script>

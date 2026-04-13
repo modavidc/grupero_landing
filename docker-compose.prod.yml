@@ -1,0 +1,24 @@
+# docker-compose.prod.yml
+# Configuración para producción con Traefik
+
+networks:
+  web:
+    external: true
+
+services:
+  grupero-landing:
+    build:
+      context: .
+      dockerfile: ${DOCKERFILE:-Dockerfile}
+    container_name: ${CONTAINER_NAME:-grupero-landing}
+    restart: ${RESTART_POLICY:-always}
+    # No exponer puertos directamente, Traefik maneja el enrutamiento
+    labels:
+      - "traefik.enable=${TRAEFIK_ENABLE:-true}"
+      - "traefik.docker.network=web"
+      - "traefik.http.routers.grupero-landing.entrypoints=websecure"
+      - "traefik.http.routers.grupero-landing.rule=Host(`${DOMAIN:-grupero.modavidc.com}`)"
+      - "traefik.http.routers.grupero-landing.tls.certresolver=http-resolv"
+      - "traefik.http.services.grupero-landing.loadbalancer.server.port=${SERVICE_PORT:-3000}"
+    networks:
+      - web

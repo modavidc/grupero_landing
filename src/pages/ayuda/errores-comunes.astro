@@ -1,0 +1,214 @@
+---
+import HelpLayout from '../../layouts/HelpLayout.astro';
+---
+
+<HelpLayout title="Errores Comunes" description="Soluciones a los problemas mas frecuentes que puedes encontrar al usar Grupero.">
+
+    <section class="help-article">
+        <nav class="breadcrumb">
+            <a href="/ayuda">Centro de Ayuda</a>
+            <span>/</span>
+            <span>Errores Comunes</span>
+        </nav>
+
+        <h1>Errores Comunes y Soluciones</h1>
+        <p class="article-meta">Encuentra la solucion a los problemas mas frecuentes</p>
+
+        <div class="help-content">
+
+            <h2 id="archivo-no-reconocido">Error: "Archivo no reconocido"</h2>
+            <p>Este error aparece cuando Grupero no puede leer el archivo que intentas importar.</p>
+
+            <h3>Causas posibles:</h3>
+            <ul>
+                <li>El archivo no es una exportacion de WhatsApp</li>
+                <li>El archivo esta danado o corrupto</li>
+                <li>El archivo tiene un formato muy antiguo</li>
+                <li>El archivo es de otra aplicacion de mensajeria</li>
+            </ul>
+
+            <h3>Solucion:</h3>
+            <ol>
+                <li>Asegurate de exportar desde <strong>WhatsApp oficial</strong></li>
+                <li>Usa la opcion "Exportar chat" dentro del grupo</li>
+                <li>Selecciona "Sin archivos" para obtener un archivo mas limpio</li>
+                <li>Intenta exportar nuevamente si el archivo parece danado</li>
+            </ol>
+
+            <div class="info-box">
+                <p><strong>Tip:</strong> El archivo debe ser .zip o .txt exportado directamente de WhatsApp.</p>
+            </div>
+
+            <h2 id="archivo-vacio">Error: "El archivo esta vacio"</h2>
+            <p>Grupero no encontro mensajes en el archivo importado.</p>
+
+            <h3>Causas posibles:</h3>
+            <ul>
+                <li>El grupo no tiene mensajes</li>
+                <li>Solo hay mensajes de sistema (entradas/salidas)</li>
+                <li>El archivo se exporto incorrectamente</li>
+            </ul>
+
+            <h3>Solucion:</h3>
+            <ol>
+                <li>Verifica que el grupo tenga conversaciones</li>
+                <li>Abre el archivo .txt y confirma que hay mensajes</li>
+                <li>Exporta nuevamente desde WhatsApp</li>
+            </ol>
+
+            <h2 id="app-cierra">La app se cierra inesperadamente</h2>
+            <p>La aplicacion se cierra sola durante el analisis o uso normal.</p>
+
+            <h3>Causas posibles:</h3>
+            <ul>
+                <li>Archivo demasiado grande para la memoria del dispositivo</li>
+                <li>Poca memoria disponible en el telefono</li>
+                <li>Version de Android/iOS no compatible</li>
+                <li>App desactualizada</li>
+            </ul>
+
+            <h3>Solucion:</h3>
+            <ol>
+                <li><strong>Cierra otras apps</strong> para liberar memoria</li>
+                <li><strong>Reinicia el telefono</strong> antes de intentar nuevamente</li>
+                <li><strong>Actualiza Grupero</strong> a la ultima version</li>
+                <li>Para grupos muy grandes, espera un poco mas durante el analisis</li>
+            </ol>
+
+            <div class="info-box warning">
+                <p><strong>Nota:</strong> Grupos con mas de 30,000 mensajes pueden requerir mas tiempo y memoria.</p>
+            </div>
+
+            <h2 id="mensajes-faltantes">No aparecen todos los mensajes</h2>
+            <p>El numero de mensajes es menor al esperado.</p>
+
+            <h3>Causas posibles:</h3>
+            <ul>
+                <li>WhatsApp solo exporta los ultimos 40,000 mensajes</li>
+                <li>Mensajes de solo multimedia no se cuentan</li>
+                <li>Mensajes eliminados no aparecen en la exportacion</li>
+            </ul>
+
+            <h3>Solucion:</h3>
+            <p>Este comportamiento es <strong>normal y esperado</strong>. Es una limitacion de WhatsApp, no de Grupero.</p>
+
+            <div class="info-box">
+                <p><strong>Limite de WhatsApp:</strong> Solo los ultimos 40,000 mensajes se pueden exportar. En grupos muy activos, esto puede representar solo algunos meses de historial.</p>
+            </div>
+
+            <h2 id="fecha-incorrecta">Fechas o estadisticas incorrectas</h2>
+            <p>Las fechas aparecen mal o las estadisticas no coinciden.</p>
+
+            <h3>Causas posibles:</h3>
+            <ul>
+                <li>Formato de fecha mal detectado</li>
+                <li>Zona horaria diferente en el dispositivo</li>
+                <li>Archivo exportado en otro idioma</li>
+            </ul>
+
+            <h3>Solucion:</h3>
+            <ol>
+                <li>Verifica que tu telefono tenga la zona horaria correcta</li>
+                <li>Si el problema persiste, exporta con WhatsApp en espanol</li>
+                <li>Contacta soporte si las fechas siguen mal</li>
+            </ol>
+
+            <h2 id="no-detecta-eventos">No detecta eventos o convocatorias</h2>
+            <p>Grupero no encuentra los eventos que esperas.</p>
+
+            <h3>Causas posibles:</h3>
+            <ul>
+                <li>Los mensajes no siguen patrones reconocibles</li>
+                <li>Eventos mencionados de forma muy informal</li>
+                <li>Idioma o expresiones no reconocidas</li>
+            </ul>
+
+            <h3>Solucion:</h3>
+            <p>La deteccion de eventos busca patrones como:</p>
+            <ul>
+                <li>Fechas explicitas: "el sabado", "manana", "15 de enero"</li>
+                <li>Palabras clave: "confirmado", "voy", "me apunto", "quien va"</li>
+                <li>Listas numeradas: "1. Juan, 2. Maria..."</li>
+            </ul>
+
+            <p>Si los eventos se mencionan de forma muy diferente, pueden no detectarse automaticamente.</p>
+
+            <h2 id="analisis-lento">El analisis tarda mucho</h2>
+            <p>El procesamiento del chat toma mas tiempo del esperado.</p>
+
+            <h3>Causas posibles:</h3>
+            <ul>
+                <li>Grupo con muchos mensajes</li>
+                <li>Dispositivo con hardware limitado</li>
+                <li>Otras apps consumiendo recursos</li>
+            </ul>
+
+            <h3>Solucion:</h3>
+            <ol>
+                <li>Ten paciencia - grupos grandes pueden tardar</li>
+                <li>No cierres la app durante el analisis</li>
+                <li>Cierra otras aplicaciones</li>
+                <li>Asegurate de tener bateria suficiente</li>
+            </ol>
+
+            <h2 id="no-actualiza">No puedo actualizar un grupo</h2>
+            <p>Al importar un grupo existente, no se agregan los nuevos mensajes.</p>
+
+            <h3>Solucion:</h3>
+            <ol>
+                <li>Exporta el chat completo nuevamente</li>
+                <li>Al importar, selecciona "Actualizar" cuando te lo pregunte</li>
+                <li>Si no pregunta, elimina el grupo y vuelve a importarlo</li>
+            </ol>
+
+            <h2 id="idioma-no-soportado">Mensajes en otro idioma</h2>
+            <p>Algunos analisis no funcionan correctamente con ciertos idiomas.</p>
+
+            <h3>Solucion:</h3>
+            <p>Grupero esta optimizado para <strong>espanol</strong>. Funciones como:</p>
+            <ul>
+                <li>Deteccion de eventos</li>
+                <li>Analisis de sentimiento</li>
+                <li>Stopwords (palabras comunes)</li>
+            </ul>
+            <p>Funcionan mejor en espanol. Otros idiomas tendran analisis basico pero preciso.</p>
+
+            <h2 id="contactar-soporte">¿El problema persiste?</h2>
+            <p>Si ninguna solucion funciona, contactanos con la siguiente informacion:</p>
+
+            <ul>
+                <li>Descripcion del error</li>
+                <li>Modelo de tu telefono</li>
+                <li>Version de Android/iOS</li>
+                <li>Version de Grupero</li>
+                <li>Tamano aproximado del grupo</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Nunca</strong> nos envies el archivo del chat. Tu privacidad es importante.</p>
+            </div>
+        </div>
+
+        <div class="related-articles">
+            <h3>Articulos relacionados</h3>
+            <div class="related-list">
+                <a href="/ayuda/importar-chat" class="related-item">
+                    <span>📥</span> Como importar chats correctamente
+                </a>
+                <a href="/ayuda/primeros-pasos" class="related-item">
+                    <span>🚀</span> Guia de primeros pasos
+                </a>
+                <a href="/contacto" class="related-item">
+                    <span>📧</span> Contactar soporte
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="help-cta">
+        <h2>¿Necesitas mas ayuda?</h2>
+        <p>Nuestro equipo responde en menos de 24 horas</p>
+        <a href="/contacto" class="btn">Contactar soporte</a>
+    </section>
+
+</HelpLayout>

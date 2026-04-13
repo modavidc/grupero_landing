@@ -1,0 +1,102 @@
+---
+const plans = [
+    {
+        name: "Gratis",
+        price: "$0",
+        period: "para siempre",
+        features: [
+            "Análisis ilimitados",
+            "Ranking de participación",
+            "Semáforo de participación",
+            "Heatmap de actividad 7x24",
+            "Estadísticas de mensajes",
+            "Gráficos de actividad",
+            "Menciones frecuentes",
+            "Iniciadores de conversación",
+            "Detección de eventos"
+        ],
+        cta: "Descargar gratis",
+        ctaClass: "btn-ghost",
+        href: "#descargar",
+        featured: false
+    },
+    {
+        name: "Pro",
+        price: "$8",
+        priceSuffix: "/mes",
+        period: "o $80/año (2 meses gratis)",
+        features: [
+            "Todo de Gratis",
+            "Resúmenes con IA",
+            "Pregunta a la IA",
+            "Panel de salud del grupo",
+            "Alertas de silencios",
+            "Análisis de sentimiento",
+            "Lista de inactivos con evidencia",
+            "Tiempos de respuesta",
+            "Mensajes eliminados",
+            "FAQ auto-generadas",
+            "Notas y etiquetas por miembro"
+        ],
+        cta: "Descargar y probar Pro",
+        ctaClass: "btn-primary",
+        href: "#descargar",
+        featured: true
+    },
+    {
+        name: "Teams",
+        price: "$15",
+        priceSuffix: "/mes",
+        period: "por administrador",
+        features: [
+            "Todo de Pro",
+            "Perfil multi-grupo por miembro",
+            "Análisis comparativo entre grupos",
+            "Acceso a API",
+            "Soporte prioritario"
+        ],
+        cta: "Contactar ventas",
+        ctaClass: "btn-ghost",
+        href: "/contacto",
+        featured: false
+    }
+];
+---
+
+<section id="precios" class="pricing">
+    <div class="container">
+        <h2 class="section-title">Simple y transparente</h2>
+        <p class="section-subtitle">Empieza gratis, escala cuando lo necesites</p>
+        <div class="pricing-grid">
+            {plans.map(plan => (
+                <div class:list={["pricing-card", { featured: plan.featured }]}>
+                    {plan.featured && <div class="pricing-badge">Recomendado</div>}
+                    <h3>{plan.name}</h3>
+                    <div class="price">{plan.price}{plan.priceSuffix && <span>{plan.priceSuffix}</span>}</div>
+                    <p class="price-period">{plan.period}</p>
+                    <ul class="pricing-features">
+                        {plan.features.map(f => <li>{f}</li>)}
+                    </ul>
+                    <a href={plan.href} class:list={["btn", "btn-full", plan.ctaClass]}>{plan.cta}</a>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .pricing { padding: 100px 0; background: var(--color-bg); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
+    .pricing-card { position: relative; background: var(--color-white); padding: 40px 32px; border-radius: var(--radius-lg); border: 2px solid var(--color-border); text-align: center; }
+    .pricing-card.featured { border-color: var(--color-primary); box-shadow: var(--shadow-xl); transform: scale(1.05); }
+    .pricing-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: white; font-size: 0.75rem; font-weight: 600; padding: 6px 16px; border-radius: var(--radius-full); }
+    .pricing-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; }
+    .price { font-size: 3rem; font-weight: 800; color: var(--color-primary-dark); }
+    .price span { font-size: 1rem; font-weight: 500; color: var(--color-text-muted); }
+    .price-period { font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 24px; }
+    .pricing-features { text-align: left; margin-bottom: 32px; }
+    .pricing-features li { padding: 8px 0; border-bottom: 1px solid var(--color-border); font-size: 0.95rem; }
+    .pricing-features li:last-child { border-bottom: none; }
+    .pricing-features li::before { content: '✓'; color: var(--color-primary); font-weight: 700; margin-right: 8px; }
+    @media (max-width: 1024px) { .pricing-grid { grid-template-columns: 1fr; max-width: 400px; } .pricing-card.featured { transform: none; } }
+</style>

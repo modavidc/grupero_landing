@@ -1,0 +1,129 @@
+---
+const navLinks = [
+    { href: "/#como-usar", label: "Cómo usar" },
+    { href: "/#features", label: "Funciones" },
+    { href: "/#para-quien", label: "Para quién" },
+    { href: "/#precios", label: "Precios" },
+];
+---
+
+<header class="header">
+    <nav class="nav container">
+        <a href="/" class="logo">
+            <img src="/images/app_icon_1024.png" alt="Grupero" class="logo-icon" />
+            <div class="logo-content">
+                <span class="logo-text">Grupero</span>
+                <span class="logo-hook">La radiografía de tus grupos de WhatsApp</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            {navLinks.map(link => (
+                <a href={link.href}>{link.label}</a>
+            ))}
+        </div>
+        <a href="/#descargar" class="btn-download">Descargar</a>
+    </nav>
+</header>
+
+<style>
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 72px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+    }
+
+    .logo-icon {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+    }
+
+    .logo-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-text {
+        font-size: 1.4rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        color: #1a3a4a;
+        line-height: 1.1;
+    }
+
+    .logo-hook {
+        font-size: 0.7rem;
+        color: #6b7280;
+        font-weight: 400;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 32px;
+    }
+
+    .nav-links a {
+        font-weight: 500;
+        color: var(--color-text-muted);
+        transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+        color: var(--color-primary);
+    }
+
+    .btn-download {
+        background: linear-gradient(135deg, #25D366 0%, #128C3E 100%);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-download:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(18, 140, 62, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+        }
+
+        .logo-hook {
+            display: none;
+        }
+    }
+</style>

@@ -1,0 +1,122 @@
+---
+import HelpLayout from '../../layouts/HelpLayout.astro';
+---
+
+<HelpLayout title="Eventos y Convocatorias" description="Como funciona la deteccion de eventos, confirmaciones y seguimiento de asistencia.">
+
+    <section class="help-article">
+        <nav class="breadcrumb">
+            <a href="/ayuda">Centro de Ayuda</a>
+            <span>/</span>
+            <span>Eventos y Convocatorias</span>
+        </nav>
+
+        <h1>Eventos y Convocatorias</h1>
+        <p class="article-meta">Analiza la organizacion de actividades en tu grupo</p>
+
+        <div class="help-content">
+
+            <h2 id="deteccion">Deteccion Automatica de Eventos</h2>
+            <p>Grupero identifica automaticamente cuando alguien organiza un evento o convocatoria en el grupo.</p>
+
+            <h3>Que busca Grupero:</h3>
+            <ul>
+                <li><strong>Fechas:</strong> "el sabado", "manana", "el 15 de enero", "este viernes"</li>
+                <li><strong>Horas:</strong> "a las 8pm", "a las 20:00", "por la tarde"</li>
+                <li><strong>Lugares:</strong> "en la cancha", "en mi casa", "en el parque"</li>
+                <li><strong>Preguntas:</strong> "quien va?", "quien se apunta?", "hay quorum?"</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Nota:</strong> La deteccion funciona mejor cuando los eventos se mencionan de forma explicita.</p>
+            </div>
+
+            <h2 id="confirmaciones">Confirmaciones (RSVP)</h2>
+            <p>Despues de detectar un evento, Grupero rastrea las respuestas:</p>
+
+            <h3>Respuestas positivas:</h3>
+            <ul>
+                <li>"Voy", "Me apunto", "Confirmo", "Si", "Ahi estare"</li>
+                <li>Emojis de confirmacion: check, pulgar arriba</li>
+            </ul>
+
+            <h3>Respuestas negativas:</h3>
+            <ul>
+                <li>"No puedo", "Paso", "Esta vez no", "Tengo compromiso"</li>
+                <li>Emojis negativos</li>
+            </ul>
+
+            <h3>Sin respuesta:</h3>
+            <p>Miembros que no respondieron al evento.</p>
+
+            <h2 id="asistencia">Tasa de Asistencia</h2>
+            <p>Para cada miembro, Grupero calcula:</p>
+
+            <ul>
+                <li><strong>Eventos convocados:</strong> A cuantos eventos fue invitado</li>
+                <li><strong>Confirmaciones:</strong> A cuantos confirmo asistencia</li>
+                <li><strong>Tasa:</strong> Porcentaje de confirmacion</li>
+            </ul>
+
+            <p>Esto te ayuda a identificar quien es confiable para los eventos.</p>
+
+            <h2 id="recordatorios">Patrones de Recordatorios</h2>
+            <p>Grupero detecta a quienes hay que recordar frecuentemente:</p>
+
+            <ul>
+                <li>Personas que solo confirman despues de varios recordatorios</li>
+                <li>Personas que necesitan que les pregunten directamente</li>
+                <li>Personas que responden rapido sin necesidad de recordatorio</li>
+            </ul>
+
+            <h2 id="historial">Historial de Eventos</h2>
+            <p>Ve todos los eventos detectados en el grupo:</p>
+
+            <ul>
+                <li>Fecha del evento</li>
+                <li>Quien lo organizo</li>
+                <li>Cuantos confirmaron</li>
+                <li>Cuantos rechazaron</li>
+                <li>Cuantos no respondieron</li>
+            </ul>
+
+            <h2 id="tips">Tips para Mejor Deteccion</h2>
+
+            <p>Para que Grupero detecte mejor los eventos:</p>
+
+            <ol>
+                <li><strong>Se explicito:</strong> "Partido el sabado a las 5pm en la cancha"</li>
+                <li><strong>Pide confirmacion:</strong> "Quien va? Confirmen"</li>
+                <li><strong>Usa listas:</strong> "1. Juan, 2. Maria..." para confirmados</li>
+                <li><strong>Menciona fechas:</strong> Evita solo decir "pronto" o "un dia"</li>
+            </ol>
+
+            <div class="info-box">
+                <p><strong>Pro tip:</strong> Los grupos deportivos tienen deteccion especializada. Ve la seccion <a href="/ayuda/grupos-deportivos">Grupos Deportivos</a>.</p>
+            </div>
+
+        </div>
+
+        <div class="related-articles">
+            <h3>Articulos relacionados</h3>
+            <div class="related-list">
+                <a href="/ayuda/grupos-deportivos" class="related-item">
+                    <span>⚽</span> Funciones para grupos deportivos
+                </a>
+                <a href="/ayuda/analisis-estadisticas" class="related-item">
+                    <span>📊</span> Otras estadisticas
+                </a>
+                <a href="/ayuda/primeros-pasos" class="related-item">
+                    <span>🚀</span> Primeros pasos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="help-cta">
+        <h2>¿Organizas muchos eventos?</h2>
+        <p>Grupero Pro tiene funciones avanzadas de seguimiento</p>
+        <a href="/#precios" class="btn">Ver planes</a>
+    </section>
+
+</HelpLayout>

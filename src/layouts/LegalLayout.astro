@@ -1,0 +1,191 @@
+---
+import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+    title: string;
+    heading: string;
+    subtitle?: string;
+    lastUpdated?: string;
+}
+
+const { title, heading, subtitle, lastUpdated } = Astro.props;
+---
+
+<Layout title={title + " - Grupero"}>
+    <Header />
+    <main class="page-layout">
+        <!-- Hero con gradiente -->
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1>{heading}</h1>
+                {subtitle && <p class="subtitle">{subtitle}</p>}
+                {lastUpdated && <p class="last-updated">Ultima actualizacion: {lastUpdated}</p>}
+            </div>
+        </section>
+
+        <!-- Contenido -->
+        <section class="page-content">
+            <div class="container">
+                <div class="content">
+                    <slot />
+                </div>
+            </div>
+        </section>
+    </main>
+    <Footer />
+</Layout>
+
+<style>
+    .page-layout {
+        padding-top: 72px;
+        min-height: 70vh;
+    }
+
+    /* Hero con gradiente */
+    .page-hero {
+        background: linear-gradient(135deg, #075E54 0%, #128C3E 50%, #25D366 100%);
+        color: white;
+        padding: 60px 24px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .page-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        pointer-events: none;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .page-hero h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+    }
+
+    .page-hero .subtitle {
+        font-size: 1.15rem;
+        opacity: 0.95;
+        margin-bottom: 0;
+    }
+
+    .page-hero .last-updated {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        margin-top: 12px;
+    }
+
+    /* Contenido */
+    .page-content {
+        padding: 60px 24px 80px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .content :global(h2) {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 48px;
+        margin-bottom: 16px;
+        color: #1a1a1a;
+    }
+
+    .content :global(h2:first-child) {
+        margin-top: 0;
+    }
+
+    .content :global(h3) {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-top: 32px;
+        margin-bottom: 12px;
+        color: #1a1a1a;
+    }
+
+    .content :global(p) {
+        color: #4b5563;
+        line-height: 1.8;
+        margin-bottom: 16px;
+    }
+
+    .content :global(ul),
+    .content :global(ol) {
+        margin-bottom: 16px;
+        padding-left: 24px;
+    }
+
+    .content :global(li) {
+        color: #4b5563;
+        line-height: 1.8;
+        margin-bottom: 8px;
+    }
+
+    .content :global(ul li) {
+        list-style: disc;
+    }
+
+    .content :global(ol li) {
+        list-style: decimal;
+    }
+
+    .content :global(a) {
+        color: #128C3E;
+        text-decoration: underline;
+    }
+
+    .content :global(a:hover) {
+        color: #075E54;
+    }
+
+    .content :global(strong) {
+        color: #1a1a1a;
+        font-weight: 600;
+    }
+
+    /* Info boxes */
+    .content :global(.info-box) {
+        background: #e8f5e9;
+        border-left: 4px solid #25D366;
+        padding: 16px 20px;
+        border-radius: 0 8px 8px 0;
+        margin: 24px 0;
+    }
+
+    .content :global(.info-box p) {
+        margin: 0;
+        color: #1a1a1a;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .page-hero {
+            padding: 48px 16px;
+        }
+
+        .page-hero h1 {
+            font-size: 2rem;
+        }
+
+        .page-content {
+            padding: 40px 16px 60px;
+        }
+    }
+</style>
