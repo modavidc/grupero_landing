@@ -23,10 +23,10 @@ services:
       # HTTP router (redirect to HTTPS)
       - "traefik.http.routers.grupero-landing-http.entrypoints=web"
       - "traefik.http.routers.grupero-landing-http.rule=Host(`${DOMAIN:-grupero.modavidc.com}`)"
-      - "traefik.http.routers.grupero-landing-http.middlewares=redirect-to-https"
-      # Middleware redirect
-      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
+      - "traefik.http.routers.grupero-landing-http.middlewares=grupero-https-redirect"
+      # Middleware redirect (nombre único por servicio)
+      - "traefik.http.middlewares.grupero-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.grupero-https-redirect.redirectscheme.permanent=true"
       # Service
       - "traefik.http.services.grupero-landing.loadbalancer.server.port=${SERVICE_PORT:-3000}"
     networks:
