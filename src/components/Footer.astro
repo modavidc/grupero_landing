@@ -28,6 +28,11 @@ const legalLinks = [
                         <span class="logo-hook">La radiografía de tus grupos de WhatsApp</span>
                     </div>
                 </a>
+                <p class="maker-intro">
+                    Soy Moisés, el único desarrollador detrás de esto.<br />
+                    Respondo personalmente en &lt;24h —
+                    <a href="mailto:moisesdavidaaron@gmail.com" class="maker-email">moisesdavidaaron@gmail.com</a>
+                </p>
             </div>
             <div class="footer-links">
                 <div class="footer-column">
@@ -122,6 +127,23 @@ const legalLinks = [
         color: rgba(255, 255, 255, 0.6);
         font-weight: 400;
         margin-top: 4px;
+    }
+
+    .maker-intro {
+        margin-top: 16px;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.6;
+    }
+
+    .maker-email {
+        color: var(--color-primary);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .maker-email:hover {
+        text-decoration: underline;
     }
 
     .footer-links {
