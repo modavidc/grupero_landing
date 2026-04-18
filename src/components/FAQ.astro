@@ -1,0 +1,131 @@
+---
+const items = [
+    {
+        q: "¿Viola los términos de WhatsApp?",
+        a: "No. Grupero usa la función oficial de \"Exportar chat\" de WhatsApp. No accedemos a tu cuenta, no instalamos bots y no intervenimos tus mensajes de ninguna forma."
+    },
+    {
+        q: "¿Mis conversaciones son privadas?",
+        a: "Sí, 100%. Todo el análisis se hace localmente en tu dispositivo. Tus mensajes nunca se suben a ningún servidor. Ni siquiera nosotros podemos ver tus chats."
+    },
+    {
+        q: "¿Necesito crear una cuenta?",
+        a: "No. Grupero funciona sin cuenta. Si te suscribes a Pro, la cuenta es gestionada por Google Play — no por nosotros."
+    },
+    {
+        q: "¿Funciona con grupos grandes?",
+        a: "Sí. Grupero está diseñado para grupos de hasta 1,024 miembros (el límite de WhatsApp). Funciona especialmente bien para grupos de 100+ personas."
+    },
+    {
+        q: "¿Funciona sin internet?",
+        a: "El análisis básico funciona 100% offline. Solo las funciones de IA (resúmenes inteligentes) en la versión Pro requieren conexión."
+    },
+    {
+        q: "¿Cómo mide la \"participación real\"?",
+        a: "No solo contamos mensajes. Analizamos actividad regular, participación en eventos, aportes en fechas especiales, tiempo de respuesta y más."
+    },
+    {
+        q: "¿Cuántos mensajes puede analizar?",
+        a: "WhatsApp exporta hasta 40,000 mensajes. Grupero analiza todos sin problema. En grupos muy activos puede representar algunos meses de historial."
+    },
+    {
+        q: "¿Es gratis de verdad?",
+        a: "Sí. El plan Gratis incluye análisis ilimitados con las funciones principales. No necesitas tarjeta. La IA corre en tu teléfono, por eso podemos ofrecerlo gratis."
+    }
+];
+---
+
+<section class="faq" id="faq">
+    <div class="container">
+        <h2 class="section-title">Preguntas frecuentes</h2>
+        <p class="section-subtitle">Lo que nos preguntan antes de descargar</p>
+        <div class="faq-list">
+            {items.map((item, i) => (
+                <details class="faq-item" open={i === 0}>
+                    <summary class="faq-question">
+                        <span>{item.q}</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <p class="faq-answer">{item.a}</p>
+                </details>
+            ))}
+        </div>
+        <p class="faq-more">
+            ¿Más dudas? <a href="/faq">Ver todas las preguntas →</a>
+        </p>
+    </div>
+</section>
+
+<style>
+    .faq {
+        padding: 100px 0;
+        background: var(--color-white);
+    }
+
+    .faq-list {
+        max-width: 720px;
+        margin: 48px auto 0;
+    }
+
+    .faq-item {
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .faq-item:first-child {
+        border-top: 1px solid var(--color-border);
+    }
+
+    .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--color-text);
+        cursor: pointer;
+        list-style: none;
+        gap: 16px;
+    }
+
+    .faq-question::-webkit-details-marker {
+        display: none;
+    }
+
+    .faq-icon {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: var(--color-primary-dark);
+        flex-shrink: 0;
+        transition: transform 0.2s ease;
+        line-height: 1;
+    }
+
+    details[open] .faq-icon {
+        transform: rotate(45deg);
+    }
+
+    .faq-answer {
+        padding: 0 0 20px;
+        color: var(--color-text-muted);
+        line-height: 1.7;
+        max-width: 640px;
+    }
+
+    .faq-more {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 0.95rem;
+        color: var(--color-text-muted);
+    }
+
+    .faq-more a {
+        color: var(--color-primary-dark);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .faq-more a:hover {
+        text-decoration: underline;
+    }
+</style>
