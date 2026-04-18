@@ -17,6 +17,11 @@
                     <img src="/images/download-ios.png" alt="Próximamente en App Store" />
                 </a>
             </div>
+            <div class="trust-chips">
+                <span>🔒 100% local</span>
+                <span>🚫 Sin registro</span>
+                <span>📂 Tus datos nunca salen de tu teléfono</span>
+            </div>
             <p class="hero-note">Gratis para empezar. Sin registro.</p>
         </div>
         <div class="hero-visual">
@@ -158,10 +163,30 @@
         opacity: 0;
     }
 
+    .trust-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 16px;
+        animation: fadeInUp 0.8s ease-out 0.45s forwards;
+        opacity: 0;
+    }
+
+    .trust-chips span {
+        background: #f0fdf4;
+        border: 1px solid #bbf7d0;
+        border-radius: 9999px;
+        padding: 6px 14px;
+        font-size: 0.8rem;
+        color: #15803d;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
     .hero-note {
         font-size: 0.875rem;
         color: #9CA3AF;
-        animation: fadeInUp 0.8s ease-out 0.45s forwards;
+        animation: fadeInUp 0.8s ease-out 0.6s forwards;
         opacity: 0;
     }
 
