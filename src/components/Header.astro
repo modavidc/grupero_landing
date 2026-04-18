@@ -25,6 +25,20 @@ const navLinks = [
     </nav>
 </header>
 
+<a href="/#descargar" class="mobile-cta-float" id="mobile-cta" aria-label="Descargar Grupero">
+    Descargar gratis
+</a>
+
+<script>
+    const cta = document.getElementById('mobile-cta');
+    if (cta) {
+        const threshold = window.innerHeight;
+        window.addEventListener('scroll', () => {
+            cta.classList.toggle('visible', window.scrollY > threshold);
+        }, { passive: true });
+    }
+</script>
+
 <style>
     .header {
         position: fixed;
@@ -124,6 +138,38 @@ const navLinks = [
 
         .logo-hook {
             display: none;
+        }
+    }
+
+    /* Mobile floating CTA */
+    .mobile-cta-float {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .mobile-cta-float {
+            display: block;
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(80px);
+            background: linear-gradient(135deg, #25D366 0%, #128C3E 100%);
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 14px 32px;
+            border-radius: 9999px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(18, 140, 62, 0.4);
+            z-index: 90;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .mobile-cta-float.visible {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
         }
     }
 </style>
