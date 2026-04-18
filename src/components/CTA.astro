@@ -4,16 +4,17 @@ import ShareButtons from './ShareButtons.astro';
 
 <section id="descargar" class="cta">
     <div class="container">
-        <h2>Deja de adivinar. Empieza a saber.</h2>
-        <p>Descarga Grupero y transforma cómo manejas tus grupos de WhatsApp.</p>
+        <h2>Tu grupo ya te está diciendo algo.</h2>
+        <p>Descarga Grupero y escúchalo.</p>
         <div class="cta-buttons">
             <a href="#" class="store-badge">
                 <img src="/images/download-google.png" alt="Disponible en Google Play" />
             </a>
-            <a href="#" class="store-badge disabled">
+            <span class="store-badge disabled" role="img" aria-label="Próximamente en App Store">
                 <img src="/images/download-ios.png" alt="Próximamente en App Store" />
-            </a>
+            </span>
         </div>
+        <p class="cta-urgency">Los grupos sanos no se arreglan solos.</p>
         <div class="cta-share">
             <ShareButtons />
         </div>
@@ -70,6 +71,13 @@ import ShareButtons from './ShareButtons.astro';
 
     .store-badge.disabled:hover {
         transform: none;
+    }
+
+    .cta-urgency {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.75);
+        margin-top: 20px;
+        font-style: italic;
     }
 
     .cta-share {
