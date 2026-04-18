@@ -3,25 +3,28 @@ const personas = [
     {
         emoji: "🎯",
         name: "El Curador",
-        size: "Grupos de 100-250 personas",
+        intent: "Cultiva comunidad",
         description: "Conoces al 95% de tu grupo. Tu dolor es repetir info y perseguir a los que no confirman.",
         features: ["FAQ dinámico auto-generado", "Detector de silencios críticos", "Seguimiento de casos especiales"],
+        plan: { label: "Plan Gratis", href: "/#precios" },
         featured: false
     },
     {
         emoji: "⚡",
         name: "El Participativo",
-        size: "Grupos de 100-300 personas",
-        description: "Exiges participación. Necesitas datos para tomar decisiones justas.",
+        intent: "Exige resultados",
+        description: "Necesitas datos para tomar decisiones justas. El que más escribe no es el que más aporta.",
         features: ["Semáforo Verde/Amarillo/Rojo", "Puntuación de participación real", "Lista de purga con evidencia", "Alertas de decaimiento"],
+        plan: { label: "Recomendado: Plan Pro →", href: "/#precios" },
         featured: true
     },
     {
         emoji: "🚀",
         name: "El Manager de Masas",
-        size: "Grupos de 500-1024 personas",
+        intent: "Contiene el caos",
         description: "Manejas un tsunami de mensajes. Necesitas filtrar ruido, detectar conflictos y mantener el control.",
         features: ["Filtro ruido vs valor", "Resumen ejecutivo con IA", "Detector de conflictos", "Panel de salud del grupo"],
+        plan: { label: "Recomendado: Plan Teams →", href: "/#precios" },
         featured: false
     }
 ];
@@ -34,14 +37,14 @@ const personas = [
         <div class="personas-grid">
             {personas.map(persona => (
                 <div class:list={["persona-card", { featured: persona.featured }]}>
-                    {persona.featured && <div class="persona-badge">Popular</div>}
                     <div class="persona-emoji">{persona.emoji}</div>
+                    <p class="persona-intent">{persona.intent}</p>
                     <h3>{persona.name}</h3>
-                    <p class="persona-size">{persona.size}</p>
                     <p class="persona-desc">{persona.description}</p>
                     <ul class="persona-features">
                         {persona.features.map(f => <li>{f}</li>)}
                     </ul>
+                    <a href={persona.plan.href} class="persona-plan-link">{persona.plan.label}</a>
                 </div>
             ))}
         </div>
@@ -55,12 +58,14 @@ const personas = [
     .persona-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .persona-card.featured { background: var(--color-white); border-color: var(--color-primary); box-shadow: var(--shadow-lg); }
     .persona-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--color-primary); color: white; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: var(--radius-full); }
-    .persona-emoji { font-size: 2.5rem; margin-bottom: 16px; }
-    .persona-card h3 { font-size: 1.375rem; font-weight: 700; margin-bottom: 4px; }
-    .persona-size { font-size: 0.875rem; color: var(--color-primary-dark); font-weight: 600; margin-bottom: 12px; }
+    .persona-emoji { font-size: 2.5rem; margin-bottom: 8px; }
+    .persona-intent { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary-dark); margin-bottom: 8px; }
+    .persona-card h3 { font-size: 1.375rem; font-weight: 700; margin-bottom: 12px; }
     .persona-desc { color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 20px; }
-    .persona-features { display: flex; flex-direction: column; gap: 8px; }
+    .persona-features { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
     .persona-features li { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
-    .persona-features li::before { content: ''; width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%; }
+    .persona-features li::before { content: ''; width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%; flex-shrink: 0; }
+    .persona-plan-link { display: inline-block; font-size: 0.875rem; font-weight: 600; color: var(--color-primary-dark); text-decoration: none; border-top: 1px solid var(--color-border); padding-top: 16px; width: 100%; }
+    .persona-plan-link:hover { text-decoration: underline; }
     @media (max-width: 1024px) { .personas-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; } }
 </style>
