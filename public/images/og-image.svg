@@ -1,0 +1,97 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="g1" cx="18%" cy="25%" r="50%" gradientUnits="userSpaceOnUse" cx1="216" cy1="157" r1="315">
+      <stop offset="0%" stop-color="#00d67e" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#00d67e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="82%" cy="80%" r="45%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00d67e" stop-opacity="0.11"/>
+      <stop offset="100%" stop-color="#00d67e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0f3d2e"/>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+  <rect width="1200" height="630" fill="url(#g2)"/>
+
+  <!-- Icon container (slightly lighter to separate from bg) -->
+  <rect x="74" y="200" width="232" height="232" rx="56" fill="#1a4d35" stroke="#00d67e" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- App icon content (icono.svg, 220x220 → centered in 232x232 with 6px padding each side) -->
+  <!-- translate to (80, 206), scale 220→220 (exact fit with 6px border from container) -->
+  <g transform="translate(80, 206)">
+    <!-- figures: 3 people -->
+    <circle cx="72" cy="142" r="10" fill="#00d67e"/>
+    <path d="M56,174 C56,150 88,150 88,174Z" fill="#00d67e"/>
+    <circle cx="148" cy="142" r="10" fill="#00d67e"/>
+    <path d="M132,174 C132,150 164,150 164,174Z" fill="#00d67e"/>
+    <circle cx="110" cy="134" r="13" fill="#00d67e"/>
+    <path d="M85,174 C85,144 135,144 135,174Z" fill="#00d67e"/>
+    <!-- trend arrow -->
+    <polygon points="82,72 68,108 94,88" fill="#00d67e"/>
+    <!-- circle + chart line -->
+    <circle cx="116" cy="60" r="36" fill="#00d67e"/>
+    <polyline points="102,70 110,64 116,68 124,55 130,50" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="130" cy="50" r="4" fill="#fff"/>
+  </g>
+
+  <!-- KICKER -->
+  <text x="376" y="226"
+    font-family="'Open Sans', 'Liberation Sans', sans-serif"
+    font-weight="600"
+    font-size="14"
+    fill="#00d67e"
+    opacity="0.8"
+    letter-spacing="3">ANDROID · GRATIS</text>
+
+  <!-- Wordmark -->
+  <text x="372" y="322"
+    font-family="'Open Sans', 'Liberation Sans', sans-serif"
+    font-weight="700"
+    font-size="108"
+    fill="white"
+    letter-spacing="-3">Grupero</text>
+
+  <!-- Tagline -->
+  <text x="376" y="376"
+    font-family="'Open Sans', 'Liberation Sans', sans-serif"
+    font-weight="400"
+    font-size="30"
+    fill="#ffffff"
+    opacity="0.62">La radiografía de tus grupos de WhatsApp.</text>
+
+  <!-- Divider -->
+  <line x1="376" y1="412" x2="1126" y2="412" stroke="#00d67e" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Trust chips -->
+  <!-- 100% local -->
+  <rect x="376" y="430" width="156" height="42" rx="21" fill="#00d67e" fill-opacity="0.12" stroke="#00d67e" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="454" y="456" text-anchor="middle"
+    font-family="'Open Sans', 'Liberation Sans', sans-serif"
+    font-weight="600" font-size="20" fill="#00d67e">100% local</text>
+
+  <!-- Sin registro -->
+  <rect x="546" y="430" width="164" height="42" rx="21" fill="#00d67e" fill-opacity="0.12" stroke="#00d67e" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="628" y="456" text-anchor="middle"
+    font-family="'Open Sans', 'Liberation Sans', sans-serif"
+    font-weight="600" font-size="20" fill="#00d67e">Sin registro</text>
+
+  <!-- IA on-device -->
+  <rect x="724" y="430" width="164" height="42" rx="21" fill="#00d67e" fill-opacity="0.12" stroke="#00d67e" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="806" y="456" text-anchor="middle"
+    font-family="'Open Sans', 'Liberation Sans', sans-serif"
+    font-weight="600" font-size="20" fill="#00d67e">IA on-device</text>
+
+  <!-- Android -->
+  <rect x="902" y="430" width="130" height="42" rx="21" fill="#00d67e" fill-opacity="0.12" stroke="#00d67e" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="967" y="456" text-anchor="middle"
+    font-family="'Open Sans', 'Liberation Sans', sans-serif"
+    font-weight="600" font-size="20" fill="#00d67e">Android</text>
+
+  <!-- URL bottom right -->
+  <text x="1148" y="598" text-anchor="end"
+    font-family="'Open Sans', 'Liberation Sans', sans-serif"
+    font-weight="400" font-size="19"
+    fill="white" opacity="0.3">grupero.modavidc.com</text>
+</svg>

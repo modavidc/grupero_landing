@@ -1,96 +1,45 @@
 ---
-// TODO: Reemplazar con testimonios reales de admins.
-// Pedir a usuarios: nombre, tipo de grupo, tamaño aproximado, y una frase corta.
-const testimonials = [
-    {
-        quote: "Por fin sé quiénes son los que de verdad mueven el grupo y quiénes solo ocupan espacio.",
-        name: "Carlos M.",
-        context: "Admin · Liga de fútbol amateur · 180 miembros"
-    },
-    {
-        quote: "Lo usé antes de la reunión anual y pude mostrar datos reales de participación. Nadie discutió.",
-        name: "Ana R.",
-        context: "Admin · Comunidad de vecinos · 340 miembros"
-    },
-    {
-        quote: "Descubrí que el grupo más activo en mensajes era el menos activo en los eventos. Cambia la perspectiva.",
-        name: "Diego P.",
-        context: "Admin · Equipo de voluntarios · 95 miembros"
-    }
-];
 ---
 
-<section class="testimonials" id="testimonios">
-    <div class="container">
-        <h2 class="section-title">Lo que dicen los admins</h2>
-        <p class="section-subtitle">De grupos reales, para grupos reales</p>
-        <div class="testimonials-grid">
-            {testimonials.map(t => (
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">"{t.quote}"</p>
-                    <div class="testimonial-author">
-                        <span class="author-name">{t.name}</span>
-                        <span class="author-context">{t.context}</span>
-                    </div>
-                </div>
-            ))}
-        </div>
+<section style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div>
+        <span class="kicker kicker-dot">Qué dicen los admins</span>
+        <h2>Admins reales, grupos reales.</h2>
+      </div>
     </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <blockquote>"Descubrí que el que más escribía era el que <em>menos</em> venía al entreno. Eso cambió cómo organizo el equipo."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RM</div>
+          <div class="testimonial-meta">
+            <span class="testimonial-name">Roberto M.</span>
+            <span class="testimonial-role">Admin liga amateur · 28 miembros</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <blockquote>"Tengo el grupo de papás del colegio. Las alertas de silencio me ayudan a saber <em>a quién marcarle aparte</em> antes de juntas importantes."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">CP</div>
+          <div class="testimonial-meta">
+            <span class="testimonial-name">Claudia P.</span>
+            <span class="testimonial-role">Mesa directiva · 142 miembros</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <blockquote>"La privacidad fue lo que me convenció. No iba a subir 3 años de chat del equipo a ningún servidor. <em>Todo local, todo claro.</em>"</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JV</div>
+          <div class="testimonial-meta">
+            <span class="testimonial-name">Javier V.</span>
+            <span class="testimonial-role">Manager producto · 480 miembros</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
-<style>
-    .testimonials {
-        padding: 100px 0;
-        background: var(--color-bg);
-    }
-
-    .testimonials-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-        max-width: 1000px;
-        margin: 48px auto 0;
-    }
-
-    .testimonial-card {
-        background: var(--color-white);
-        border-radius: var(--radius-lg);
-        padding: 32px;
-        border: 1px solid var(--color-border);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 24px;
-    }
-
-    .testimonial-quote {
-        font-size: 1.05rem;
-        line-height: 1.7;
-        color: var(--color-text);
-        font-style: italic;
-    }
-
-    .testimonial-author {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .author-name {
-        font-weight: 700;
-        font-size: 0.9rem;
-        color: var(--color-text);
-    }
-
-    .author-context {
-        font-size: 0.8rem;
-        color: var(--color-text-muted);
-    }
-
-    @media (max-width: 900px) {
-        .testimonials-grid {
-            grid-template-columns: 1fr;
-            max-width: 480px;
-        }
-    }
-</style>

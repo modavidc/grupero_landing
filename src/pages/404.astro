@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="404 — Página no encontrada · Grupero" description="Esta página no existe o fue eliminada.">
+  <Header />
+
+  <main class="error-page">
+    <div class="wrap error-wrap">
+
+      <div class="error-badge">
+        <svg width="72" height="72" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="220" height="220" rx="48" fill="#0f3d2e"/>
+          <circle cx="72" cy="142" r="10" fill="#00d67e"/>
+          <path d="M56,174 C56,150 88,150 88,174Z" fill="#00d67e"/>
+          <circle cx="148" cy="142" r="10" fill="#00d67e"/>
+          <path d="M132,174 C132,150 164,150 164,174Z" fill="#00d67e"/>
+          <circle cx="110" cy="134" r="13" fill="#00d67e"/>
+          <path d="M85,174 C85,144 135,144 135,174Z" fill="#00d67e"/>
+          <polygon points="82,72 68,108 94,88" fill="#00d67e"/>
+          <circle cx="116" cy="60" r="36" fill="#00d67e"/>
+          <polyline points="102,70 110,64 116,68 124,55 130,50" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="130" cy="50" r="4" fill="#fff"/>
+        </svg>
+      </div>
+
+      <div class="error-code">404</div>
+
+      <h1 class="error-title">Esta página no está en el grupo</h1>
+
+      <p class="lead error-lead">
+        Parece que esta URL fue eliminada, nunca existió, o simplemente salió del grupo sin avisar.
+      </p>
+
+      <div class="error-message-bubble">
+        <div class="bubble-meta">Grupero · ahora</div>
+        <div class="bubble-text">
+          No encontré esta página. ¿Quizás buscabas la <a href="/">página principal</a> o el <a href="/faq">FAQ</a>?
+        </div>
+        <div class="bubble-checks">✓✓</div>
+      </div>
+
+      <div class="error-actions">
+        <a href="/" class="btn btn-accent btn-lg">Ir al inicio →</a>
+        <a href="/faq" class="btn btn-ghost btn-lg">Ver FAQ</a>
+        <a href="/contacto" class="btn btn-ghost btn-lg">Contactar</a>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--bg);
+    padding: 120px 0 80px;
+  }
+
+  .error-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .error-badge {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px -8px rgba(18,140,62,.25);
+  }
+
+  .error-code {
+    font-size: clamp(96px, 16vw, 160px);
+    font-weight: 800;
+    letter-spacing: -.04em;
+    line-height: 1;
+    color: transparent;
+    background: linear-gradient(135deg, var(--brand) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .error-title {
+    font-size: clamp(26px, 3.5vw, 44px);
+    letter-spacing: -.025em;
+    margin: 0;
+  }
+
+  .error-lead {
+    color: var(--ink-2);
+    max-width: 42ch;
+    margin: 0 auto;
+  }
+
+  /* WhatsApp-style bubble */
+  .error-message-bubble {
+    position: relative;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 0 18px 18px 18px;
+    padding: 14px 18px 12px;
+    max-width: 380px;
+    text-align: left;
+    margin-top: 8px;
+  }
+
+  .error-message-bubble::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid var(--line);
+    border-left: 10px solid transparent;
+  }
+
+  .error-message-bubble::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 9px solid var(--bg-2);
+    border-left: 9px solid transparent;
+  }
+
+  .bubble-meta {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--brand);
+    margin-bottom: 4px;
+    letter-spacing: .01em;
+  }
+
+  .bubble-text {
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.5;
+  }
+
+  .bubble-text a {
+    color: var(--brand);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color .15s;
+  }
+
+  .bubble-text a:hover {
+    text-decoration-color: var(--brand);
+  }
+
+  .bubble-checks {
+    text-align: right;
+    font-size: 11px;
+    color: var(--accent);
+    margin-top: 6px;
+    letter-spacing: -.05em;
+  }
+
+  .error-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  @media (max-width: 480px) {
+    .error-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+    .error-actions .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>

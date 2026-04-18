@@ -1,0 +1,35 @@
+<svg width="480" height="120" viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- App icon (icono.svg, 220x220 scaled to 100x100) -->
+  <!-- scale = 100/220 = 0.4545, centered vertically: y = (120-100)/2 = 10 -->
+  <g transform="translate(0, 10) scale(0.4545)">
+    <rect width="220" height="220" rx="48" fill="#0f3d2e"/>
+    <circle cx="72" cy="142" r="10" fill="#00d67e"/>
+    <path d="M56,174 C56,150 88,150 88,174Z" fill="#00d67e"/>
+    <circle cx="148" cy="142" r="10" fill="#00d67e"/>
+    <path d="M132,174 C132,150 164,150 164,174Z" fill="#00d67e"/>
+    <circle cx="110" cy="134" r="13" fill="#00d67e"/>
+    <path d="M85,174 C85,144 135,144 135,174Z" fill="#00d67e"/>
+    <polygon points="82,72 68,108 94,88" fill="#00d67e"/>
+    <circle cx="116" cy="60" r="36" fill="#00d67e"/>
+    <polyline points="102,70 110,64 116,68 124,55 130,50" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="130" cy="50" r="4" fill="#fff"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="116" y="72"
+    font-family="'Open Sans', 'Liberation Sans', sans-serif"
+    font-weight="700"
+    font-size="64"
+    fill="#0f3d2e"
+    letter-spacing="-2">Grupero</text>
+
+  <!-- Tagline -->
+  <text x="117" y="96"
+    font-family="'Open Sans', 'Liberation Sans', sans-serif"
+    font-weight="400"
+    font-size="16"
+    fill="#6B7280"
+    letter-spacing="0">Radiografía de tus grupos de WhatsApp</text>
+
+</svg>

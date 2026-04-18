@@ -1,0 +1,995 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+if (import.meta.env.PROD) {
+  return Astro.redirect('/', 301);
+}
+---
+
+<Layout
+  title="Funciones de Grupero — Comparativa completa por plan"
+  description="Tabla completa de todas las funciones de Grupero: qué incluye el plan Gratis, Pro y Teams. Cada feature explicado, sin letra pequeña."
+>
+  <Header />
+
+  <main class="ft-main">
+
+    <!-- Page header -->
+    <div class="ft-hero">
+      <div class="wrap-sm">
+        <span class="kicker kicker-dot">Funciones completas</span>
+        <h1 class="ft-title">Todo lo que puede hacer Grupero.</h1>
+        <p class="lead">Sin letra pequeña. Cada función explicada, con el plan en que está disponible.</p>
+      </div>
+    </div>
+
+    <!-- Sticky plan header -->
+    <div class="ft-sticky" id="ft-sticky">
+      <div class="ft-sticky-inner wrap">
+        <div class="ft-sticky-label">Funciones</div>
+        <div class="ft-col ft-col-free">
+          <span class="ft-plan-name">Gratis</span>
+          <span class="ft-plan-price">US$0</span>
+          <a href="#descargar" class="btn btn-ghost ft-cta">Descargar</a>
+        </div>
+        <div class="ft-col ft-col-pro ft-col-featured">
+          <span class="ft-plan-badge">Recomendado</span>
+          <span class="ft-plan-name">Pro</span>
+          <span class="ft-plan-price">US$6.67<sup>/mes</sup></span>
+          <a href="#descargar" class="btn btn-accent ft-cta">Probar gratis →</a>
+        </div>
+        <div class="ft-col ft-col-teams">
+          <span class="ft-plan-name">Teams</span>
+          <span class="ft-plan-price">US$15<sup>/mes</sup></span>
+          <a href="/contacto" class="btn btn-ghost ft-cta">Contactar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature table -->
+    <div class="ft-table-wrap wrap">
+      <div class="ft-table" role="table">
+
+        <!-- ── IMPORTACIÓN Y ANÁLISIS ── -->
+        <div class="ft-category" role="rowgroup">
+          <div class="ft-cat-header" role="row">
+            <span>📥 Importación y análisis</span>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Importar chat desde WhatsApp (ZIP)</span>
+              <span class="ft-feat-desc">Arrastra el archivo exportado y en 30 segundos tienes el análisis completo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check" aria-label="Incluido">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check" aria-label="Incluido">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check" aria-label="Incluido">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Múltiples grupos simultáneos</span>
+              <span class="ft-feat-desc">Analiza todos los grupos que quieras, sin límite de cantidad.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Análisis 100% offline</span>
+              <span class="ft-feat-desc">Todo se procesa en tu teléfono. No necesitas internet, no hay servidores.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Re-análisis con historial de snapshots</span>
+              <span class="ft-feat-desc">Re-importa el mismo grupo y compara cómo evolucionó respecto al análisis anterior.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Búsqueda full-text en mensajes</span>
+              <span class="ft-feat-desc">Busca cualquier palabra o frase en el historial del chat. Filtra por remitente.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Exportar análisis a CSV y PDF</span>
+              <span class="ft-feat-desc">Descarga el análisis completo o solo el ranking para usarlo fuera de la app.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Compartir análisis directamente</span>
+              <span class="ft-feat-desc">Envía el reporte completo por WhatsApp, email o cualquier app de tu teléfono.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+        </div>
+
+        <!-- ── SALUD DEL GRUPO ── -->
+        <div class="ft-category" role="rowgroup">
+          <div class="ft-cat-header" role="row">
+            <span>🩺 Salud del grupo</span>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Semáforo verde / amarillo / rojo</span>
+              <span class="ft-feat-desc">Clasifica a cada miembro según su participación reciente: activo, en riesgo o inactivo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Score de salud 0–100</span>
+              <span class="ft-feat-desc">Un número que resume qué tan vivo está el grupo. Actualizable al re-importar.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Panel de salud avanzado</span>
+              <span class="ft-feat-desc">Vista detallada con factores de salud, tendencias y diagnóstico de dinámicas del grupo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash" aria-label="No incluido">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Histórico de salud mes a mes</span>
+              <span class="ft-feat-desc">Visualiza cómo evolucionó la salud del grupo en el tiempo con cada re-importación.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+        </div>
+
+        <!-- ── PARTICIPACIÓN ── -->
+        <div class="ft-category" role="rowgroup">
+          <div class="ft-cat-header" role="row">
+            <span>🏆 Participación y ranking</span>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Ranking de participación</span>
+              <span class="ft-feat-desc">Top de miembros con score compuesto: mensajes + asistencia + respuestas a eventos. Con medallas y porcentajes.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Estadísticas de mensajes</span>
+              <span class="ft-feat-desc">Total de mensajes, palabras, emojis, media y links por miembro y por grupo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Menciones frecuentes</span>
+              <span class="ft-feat-desc">Matriz de quién menciona a quién en el chat. Detecta relaciones y sub-grupos dentro del grupo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Nube de emojis del grupo</span>
+              <span class="ft-feat-desc">Los emojis más usados del grupo, con frecuencia. El termómetro emocional visual del chat.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Palabras más frecuentes</span>
+              <span class="ft-feat-desc">El vocabulario real del grupo. Útil para detectar temas recurrentes y dinámicas internas.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Initiadores de conversación</span>
+              <span class="ft-feat-desc">Quién rompe el silencio más frecuentemente. Identifica a los motores sociales del grupo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Lista de inactivos con evidencia</span>
+              <span class="ft-feat-desc">Los miembros que no participan, con última fecha de actividad y sugerencia de acción.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Alertas de silencio crítico</span>
+              <span class="ft-feat-desc">Cuando alguien importante deja de participar, te avisamos. Umbral configurable: 7, 14 o 30 días.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Tiempos de respuesta</span>
+              <span class="ft-feat-desc">Cuánto tarda cada miembro en responder mensajes. Detecta quién lee y no contesta.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Análisis de sentimiento</span>
+              <span class="ft-feat-desc">Tono general del grupo (positivo / neutro / negativo) y evolución en el tiempo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Clasificación de actividad por miembro</span>
+              <span class="ft-feat-desc">Cada miembro categorizado automáticamente: Activo, Esporádico, Observador silencioso o Inactivo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Links compartidos por categoría</span>
+              <span class="ft-feat-desc">Desglose de links en el grupo: YouTube, Spotify, Instagram, TikTok, noticias, etc. Con barras de progreso.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Mensajes eliminados</span>
+              <span class="ft-feat-desc">Conteo de mensajes borrados por usuario. Un indicador sutil de dinamicas internas del grupo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+        </div>
+
+        <!-- ── ACTIVIDAD TEMPORAL ── -->
+        <div class="ft-category" role="rowgroup">
+          <div class="ft-cat-header" role="row">
+            <span>📊 Actividad y tiempo</span>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Heatmap de actividad 7×24</span>
+              <span class="ft-feat-desc">Mapa visual de actividad hora × día. Sabe exactamente cuándo está más vivo tu grupo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Gráfico de actividad por día de semana</span>
+              <span class="ft-feat-desc">Distribución de mensajes por día (Lun–Dom). Detecta los días más y menos activos.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Línea de tiempo de mensajes</span>
+              <span class="ft-feat-desc">Evolución diaria del volumen de mensajes desde el inicio del chat hasta hoy.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Día más activo y hora pico</span>
+              <span class="ft-feat-desc">El día con más mensajes en toda la historia del grupo y la franja horaria de mayor actividad.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Racha más larga</span>
+              <span class="ft-feat-desc">Los días consecutivos con actividad en el grupo. Mide la constancia y el engagement sostenido.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+        </div>
+
+        <!-- ── EVENTOS ── -->
+        <div class="ft-category" role="rowgroup">
+          <div class="ft-cat-header" role="row">
+            <span>📅 Eventos y convocatorias</span>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Detección automática de eventos</span>
+              <span class="ft-feat-desc">Grupero lee el chat y detecta fechas, convocatorias y actividades sin que tengas que marcarlas.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Historial de asistencia por evento</span>
+              <span class="ft-feat-desc">Quién confirmó, quién declinó y quién nunca respondió en cada evento detectado.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Patrón "confirma pero no va"</span>
+              <span class="ft-feat-desc">Detecta a quienes confirman asistencia sistemáticamente pero luego no aparecen.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">FAQ auto-generadas</span>
+              <span class="ft-feat-desc">Preguntas frecuentes del grupo detectadas automáticamente. ¿Cuándo es el próximo partido? ¿Cuánto es la cuota?</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Timeline de confirmaciones</span>
+              <span class="ft-feat-desc">Secuencia visual de quién confirmó primero, quién se bajó y cuánto tardó en llenarse el cupo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Tasa de asistencia por participante</span>
+              <span class="ft-feat-desc">Porcentaje de confirmación histórico de cada miembro. Sabe de antemano quién va a ir y quién no.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Patrones de recordatorio</span>
+              <span class="ft-feat-desc">Detecta a quiénes hay que recordar frecuentemente para que confirmen. Quién responde solo con empujoncito.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+        </div>
+
+        <!-- ── GRUPOS DEPORTIVOS ── -->
+        <div class="ft-category" role="rowgroup">
+          <div class="ft-cat-header" role="row">
+            <span>⚽ Grupos deportivos</span>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Clasificación de convocatoria</span>
+              <span class="ft-feat-desc">Divide automáticamente al grupo en Los Fijos, Probables, Riesgosos y Chancletas según historial de asistencia real.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Ghost Score</span>
+              <span class="ft-feat-desc">Detecta a los que están en el grupo y leen los mensajes, pero nunca confirman ni van. El fantasma del grupo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Fill Rate de convocatoria</span>
+              <span class="ft-feat-desc">Qué porcentaje del cupo se llena históricamente. Útil para saber cuántos convocar para llegar al número exacto.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Detección automática de tipo de grupo</span>
+              <span class="ft-feat-desc">Grupero reconoce si es un grupo de fútbol, basket u otro deporte y adapta el análisis automáticamente.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Parser de listas de convocatoria</span>
+              <span class="ft-feat-desc">Extrae automáticamente listas numeradas del chat para trackear confirmaciones con un solo vistazo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Velocidad de llenado de cupo</span>
+              <span class="ft-feat-desc">Tiempo promedio desde que se lanza la convocatoria hasta que se completa el cupo del evento.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+        </div>
+
+        <!-- ── MIEMBROS ── -->
+        <div class="ft-category" role="rowgroup">
+          <div class="ft-cat-header" role="row">
+            <span>👤 Perfiles de miembros</span>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Perfil individual por miembro</span>
+              <span class="ft-feat-desc">Pantalla dedicada con heatmap propio, nube de emojis personal, estadísticas individuales y primer mensaje en el grupo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Notas y etiquetas por miembro</span>
+              <span class="ft-feat-desc">Añade notas privadas: cómo se conocieron, fecha de primer contacto, etiquetas personalizadas (capitán, moroso, organizador…).</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-teams" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Perfil multi-grupo por miembro</span>
+              <span class="ft-feat-desc">Ve a un miembro en todos tus grupos a la vez: presencia total, patrones de comportamiento cross-grupo.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-teams" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Detección de patrones de migración</span>
+              <span class="ft-feat-desc">Identifica miembros que se fueron de un grupo tuyo y aparecen en otro. Entiende cómo se mueve tu comunidad.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+        </div>
+
+        <!-- ── INTELIGENCIA ARTIFICIAL ── -->
+        <div class="ft-category" role="rowgroup">
+          <div class="ft-cat-header" role="row">
+            <span>🤖 Inteligencia artificial</span>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Resúmenes automáticos con IA</span>
+              <span class="ft-feat-desc">Resumen ejecutivo de la semana: acuerdos alcanzados, próximos eventos, quién estuvo activo y quién no.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Pregunta a la IA sobre tu grupo</span>
+              <span class="ft-feat-desc">"¿Quién falta más?" "Resume esta semana." "¿Cuándo fue el último partido?" Respuestas en lenguaje natural.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Atajos de IA precargados</span>
+              <span class="ft-feat-desc">Quick prompts: "Resumen de la semana", "Próximos eventos", "Top contribuidores", "Acuerdos pendientes".</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-teams" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Análisis con IA cruzando todos tus grupos</span>
+              <span class="ft-feat-desc">Consultas que agregan información de todos tus grupos a la vez. "¿Quién aparece en más grupos?" "¿Qué grupos están más activos?"</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-pro" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Conecta tu propia API key de OpenAI</span>
+              <span class="ft-feat-desc">Usa tu cuenta de OpenAI para resúmenes más avanzados y análisis personalizados sin límites.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+        </div>
+
+        <!-- ── MULTI-GRUPO Y API ── -->
+        <div class="ft-category" role="rowgroup">
+          <div class="ft-cat-header" role="row">
+            <span>🏢 Multi-grupo y Teams</span>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Estadísticas globales de todos tus grupos</span>
+              <span class="ft-feat-desc">Totales agregados: grupos, mensajes, palabras, emojis, media, links y promedios de toda tu actividad.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-teams" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Análisis comparativo entre grupos</span>
+              <span class="ft-feat-desc">Compara salud, participación y actividad entre todos tus grupos en un solo dashboard.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-teams" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Acceso a API</span>
+              <span class="ft-feat-desc">Integra los datos de tus grupos en tus propias herramientas y dashboards.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row ft-row-teams" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Soporte prioritario</span>
+              <span class="ft-feat-desc">Respuesta directa del equipo en menos de 24 horas para cualquier consulta o problema.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-dash">—</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+        </div>
+
+        <!-- ── PRIVACIDAD ── -->
+        <div class="ft-category" role="rowgroup">
+          <div class="ft-cat-header" role="row">
+            <span>🔒 Privacidad</span>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">100% offline — sin conexión requerida</span>
+              <span class="ft-feat-desc">Todo el análisis sucede en tu teléfono. Grupero funciona sin internet desde el primer uso.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Cero datos enviados a servidores</span>
+              <span class="ft-feat-desc">Tus chats nunca salen de tu dispositivo. No hay uploads, no hay sincronización en la nube.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Sin rastreo ni analíticas</span>
+              <span class="ft-feat-desc">No hay seguimiento de uso, no hay telemetría, no hay SDK de terceros que observe lo que haces.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Almacenamiento solo en tu dispositivo</span>
+              <span class="ft-feat-desc">Los datos del análisis se guardan localmente. Tú controlas dónde están y cuándo se borran.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+        </div>
+
+        <!-- ── CONFIGURACIÓN ── -->
+        <div class="ft-category" role="rowgroup">
+          <div class="ft-cat-header" role="row">
+            <span>⚙️ Configuración</span>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Temas: Sistema, Claro y Oscuro</span>
+              <span class="ft-feat-desc">Elige el aspecto visual de la app o déjalo en automático para que siga el tema del teléfono.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Pantalla de funcionalidades desde Ajustes</span>
+              <span class="ft-feat-desc">Accede a la lista completa de capacidades de la app directamente desde el menú de configuración.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+
+          <div class="ft-row" role="row">
+            <div class="ft-feat" role="cell">
+              <span class="ft-feat-name">Información de versión</span>
+              <span class="ft-feat-desc">Versión actual y descripción de la app accesibles desde Ajustes. Siempre sabes qué build tienes.</span>
+            </div>
+            <div class="ft-val ft-val-free" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-pro" role="cell"><span class="ft-check">✓</span></div>
+            <div class="ft-val ft-val-teams" role="cell"><span class="ft-check">✓</span></div>
+          </div>
+        </div>
+
+      </div><!-- /ft-table -->
+    </div><!-- /ft-table-wrap -->
+
+    <!-- Bottom CTA -->
+    <div class="ft-bottom-cta">
+      <div class="wrap-sm" style="text-align:center">
+        <p class="lead" style="margin-bottom:32px;margin-left:auto;margin-right:auto">¿Tienes dudas sobre qué plan te conviene? Empieza gratis — siempre puedes subir.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a href="#descargar" class="btn btn-accent btn-lg">Descargar gratis →</a>
+          <a href="/contacto" class="btn btn-ghost btn-lg" style="border:1px solid var(--line)">Hablar con el equipo</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ── Page layout ── */
+  .ft-main { padding-top: 80px; }
+
+  .ft-hero {
+    padding: 80px 0 56px;
+    background: linear-gradient(180deg, #fff 0%, #f0fdf4 100%);
+    border-bottom: 1px solid var(--line);
+  }
+  .ft-hero .kicker-dot { display: inline-block; margin-bottom: 16px; }
+  .ft-title {
+    font-size: clamp(36px, 4vw, 60px);
+    line-height: 1.06;
+    letter-spacing: -.03em;
+    margin-bottom: 16px;
+  }
+
+  /* ── Sticky plan header ── */
+  .ft-sticky {
+    position: sticky;
+    top: 64px;
+    z-index: 50;
+    background: rgba(255,255,255,.96);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 2px solid var(--line);
+    box-shadow: 0 4px 24px -8px rgba(18,140,62,.08);
+  }
+  .ft-sticky-inner {
+    display: grid;
+    grid-template-columns: 1fr 200px 220px 200px;
+    gap: 0;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .ft-sticky-label {
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+  }
+  .ft-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 0 12px;
+    border-left: 1px solid var(--line);
+    position: relative;
+  }
+  .ft-col-featured {
+    background: linear-gradient(180deg, rgba(37,211,102,.07) 0%, rgba(18,140,62,.04) 100%);
+    border-left: 1px solid rgba(18,140,62,.2);
+    border-right: 1px solid rgba(18,140,62,.2);
+    margin: -16px 0;
+    padding: 16px 12px;
+  }
+  .ft-plan-badge {
+    position: absolute;
+    top: 8px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-size: 9px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+  .ft-plan-name {
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--ink-3);
+    margin-top: 18px;
+  }
+  .ft-col-featured .ft-plan-name { color: var(--brand); }
+  .ft-plan-price {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -.03em;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .ft-plan-price sup {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ink-3);
+    vertical-align: super;
+    letter-spacing: 0;
+  }
+  .ft-cta {
+    font-size: 12px;
+    padding: 8px 16px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ── Table ── */
+  .ft-table-wrap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .ft-table {
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  /* Category header */
+  .ft-cat-header {
+    display: grid;
+    grid-template-columns: 1fr 200px 220px 200px;
+    background: var(--ink);
+    padding: 14px 24px;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #fff;
+  }
+  .ft-category:not(:first-child) .ft-cat-header {
+    border-top: 1px solid var(--line);
+  }
+
+  /* Feature row */
+  .ft-row {
+    display: grid;
+    grid-template-columns: 1fr 200px 220px 200px;
+    border-top: 1px solid var(--line);
+    transition: background .15s;
+  }
+  .ft-row:hover { background: var(--bg-2); }
+  .ft-row-pro .ft-val-pro,
+  .ft-row-pro .ft-val-teams { background: rgba(37,211,102,.04); }
+  .ft-row-teams .ft-val-teams { background: rgba(37,211,102,.04); }
+
+  /* Feature cell */
+  .ft-feat {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .ft-feat-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.35;
+  }
+  .ft-feat-desc {
+    font-size: 12px;
+    color: var(--ink-3);
+    line-height: 1.5;
+    max-width: 52ch;
+  }
+
+  /* Value cells */
+  .ft-val {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 12px;
+    border-left: 1px solid var(--line);
+  }
+  .ft-val-pro {
+    border-left: 1px solid rgba(18,140,62,.15);
+    border-right: 1px solid rgba(18,140,62,.15);
+  }
+  .ft-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .ft-dash {
+    font-size: 20px;
+    color: var(--line-2);
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  /* Bottom CTA */
+  .ft-bottom-cta {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line);
+    padding: 80px 0;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 860px) {
+    .ft-sticky-inner,
+    .ft-cat-header,
+    .ft-row {
+      grid-template-columns: 1fr 80px 90px 80px;
+    }
+    .ft-feat { padding: 16px; }
+    .ft-feat-desc { display: none; }
+    .ft-val { padding: 16px 4px; }
+    .ft-check { width: 22px; height: 22px; font-size: 11px; }
+    .ft-plan-price { font-size: 16px; }
+    .ft-cta { display: none; }
+    .ft-sticky-label { display: none; }
+    .ft-col-featured { margin: -8px 0; padding: 8px 4px; }
+    .ft-plan-badge { display: none; }
+    .ft-plan-name { margin-top: 4px; font-size: 9px; }
+    .ft-cat-header { grid-template-columns: 1fr; font-size: 11px; }
+    .ft-cat-header > span::after { content: ""; }
+    .ft-sticky { top: 0; }
+  }
+
+  @media (max-width: 540px) {
+    .ft-hero { padding: 60px 0 40px; }
+    .ft-title { font-size: 30px; }
+  }
+</style>

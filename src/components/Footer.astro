@@ -1,615 +1,75 @@
 ---
-const productLinks = [
-    { href: "/#features", label: "Funciones" },
-    { href: "/#precios", label: "Precios" },
-];
-
-const supportLinks = [
-    { href: "/ayuda", label: "Centro de ayuda" },
-    { href: "/contacto", label: "Contacto" },
-    { href: "/faq", label: "FAQ" },
-];
-
-const legalLinks = [
-    { href: "/terminos", label: "Términos" },
-    { href: "/privacidad", label: "Privacidad" },
-    { href: "/cookies", label: "Cookies" },
-];
 ---
 
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <a href="/" class="logo">
-                    <img src="/images/app_icon_1024.png" alt="Grupero" class="logo-icon" />
-                    <div class="logo-content">
-                        <span class="logo-text">Grupero</span>
-                        <span class="logo-hook">La radiografía de tus grupos de WhatsApp</span>
-                    </div>
-                </a>
-                <p class="maker-intro">
-                    Soy Moisés, el único desarrollador detrás de esto.<br />
-                    Respondo personalmente en &lt;24h —
-                    <a href="mailto:moisesdavidaaron@gmail.com" class="maker-email">moisesdavidaaron@gmail.com</a>
-                </p>
-            </div>
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h4>Producto</h4>
-                    {productLinks.map(link => (
-                        <a href={link.href}>{link.label}</a>
-                    ))}
-                </div>
-                <div class="footer-column">
-                    <h4>Soporte</h4>
-                    {supportLinks.map(link => (
-                        <a href={link.href}>{link.label}</a>
-                    ))}
-                </div>
-                <div class="footer-column">
-                    <h4>Legal</h4>
-                    {legalLinks.map(link => (
-                        <a href={link.href}>{link.label}</a>
-                    ))}
-                </div>
-            </div>
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-brand" href="#">
+          <svg class="nav-logo" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="220" height="220" rx="48" fill="#0f3d2e"/>
+            <circle cx="72" cy="142" r="10" fill="#00d67e"/>
+            <path d="M56,174 C56,150 88,150 88,174Z" fill="#00d67e"/>
+            <circle cx="148" cy="142" r="10" fill="#00d67e"/>
+            <path d="M132,174 C132,150 164,150 164,174Z" fill="#00d67e"/>
+            <circle cx="110" cy="134" r="13" fill="#00d67e"/>
+            <path d="M85,174 C85,144 135,144 135,174Z" fill="#00d67e"/>
+            <polygon points="82,72 68,108 94,88" fill="#00d67e"/>
+            <circle cx="116" cy="60" r="36" fill="#00d67e"/>
+            <polyline points="102,70 110,64 116,68 124,55 130,50" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="130" cy="50" r="4" fill="#fff"/>
+          </svg>Grupero
+        </a>
+        <p>La radiografía de tus grupos de WhatsApp. Análisis con IA, 100% local.</p>
+        <div class="footer-human">
+          <div class="footer-avatar">M</div>
+          <div class="footer-human-text"><b>Soy Moisés</b>, el que hizo esta app.<br>Respondo personalmente en &lt;24h: <a href="mailto:moises@modavidc.com" style="color:var(--brand);font-weight:500">moises@modavidc.com</a></div>
         </div>
-        <div class="footer-bottom">
-            <button class="honest-work" id="honestWorkBtn" type="button" aria-label="Ver más sobre este meme">
-                <img src="/images/honest-work-icon.png" alt="Trabajo honesto" class="farmer-icon" />
-                <span class="honest-text">"No es mucho, pero es trabajo honesto"</span>
-            </button>
-            <p class="copyright">&copy; 2026 Grupero. Hecho por <a href="https://modavidc.com" target="_blank" rel="noopener" class="author-link">Moisés Cedeño</a></p>
-        </div>
-
-        <!-- Modal del meme -->
-        <div class="meme-modal" id="memeModal">
-            <div class="meme-overlay" id="memeOverlay"></div>
-            <div class="stars-container" id="starsContainer"></div>
-            <div class="meme-content">
-                <button class="meme-close" id="memeClose" aria-label="Cerrar">&times;</button>
-                <img src="/images/honest-work-meme.png" alt="No es mucho, pero es trabajo honesto" class="meme-image" />
-                <div class="meme-info">
-                    <h3>No es mucho, pero es trabajo honesto</h3>
-                    <p><strong>David Brandt (1947–2023)</strong> fue un granjero de Ohio y veterano de Vietnam condecorado con tres Corazones Púrpura.</p>
-                    <p>Pionero de la agricultura sin labranza desde 1971, dedicó su vida a mejorar la salud del suelo. En 2016 fue nombrado "Master Farmer" por Ohio Farmer Magazine.</p>
-                    <p>Su foto, tomada en 2012, se convirtió en meme viral en 2018. David disfrutaba ser parte de la cultura de internet, aunque admitía que su profesora de inglés no aprobaría su uso de "ain't".</p>
-                    <p class="meme-signature">Descansa en paz, leyenda 🌾</p>
-                </div>
-            </div>
-        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Producto</h5>
+        <ul>
+          <li><a href="#como-usar">Cómo se usa</a></li>
+          <li><a href="#features">Funciones</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#descargar">Descargar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Soporte</h5>
+        <ul>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/ayuda">Centro de ayuda</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/changelog">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="/privacidad">Privacidad</a></li>
+          <li><a href="/terminos">Términos</a></li>
+          <li><a href="/cookies">Cookies</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="footer-bottom">
+      <div>© 2026 Grupero · Hecho por <a style="color:var(--brand);font-weight:500" href="https://modavidc.com" target="_blank" rel="noopener noreferrer">Moisés Cedeño</a></div>
+      <div>"No es mucho, pero es trabajo honesto" 🌾</div>
+    </div>
+  </div>
 </footer>
 
-<style>
-    .footer {
-        background: var(--color-text);
-        color: white;
-        padding: 60px 0 24px;
-    }
-
-    .footer-content {
-        display: grid;
-        grid-template-columns: 1.5fr 2fr;
-        gap: 60px;
-        margin-bottom: 40px;
-    }
-
-    .footer-brand .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        text-decoration: none;
-    }
-
-    .logo-icon {
-        width: 44px;
-        height: 44px;
-        object-fit: contain;
-    }
-
-    .logo-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .logo-text {
-        font-size: 1.4rem;
-        font-weight: 800;
-        letter-spacing: -0.5px;
-        color: white;
-        line-height: 1.1;
-    }
-
-    .logo-hook {
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.6);
-        font-weight: 400;
-        margin-top: 4px;
-    }
-
-    .maker-intro {
-        margin-top: 16px;
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.55);
-        line-height: 1.6;
-    }
-
-    .maker-email {
-        color: var(--color-primary);
-        text-decoration: none;
-        font-weight: 500;
-    }
-
-    .maker-email:hover {
-        text-decoration: underline;
-    }
-
-    .footer-links {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-    }
-
-    .footer-column h4 {
-        font-size: 0.875rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 16px;
-        color: rgba(255, 255, 255, 0.5);
-    }
-
-    .footer-column a {
-        display: block;
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 0.95rem;
-        padding: 6px 0;
-        transition: color 0.2s;
-    }
-
-    .footer-column a:hover {
-        color: var(--color-primary);
-    }
-
-    .footer-bottom {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 24px;
-        text-align: center;
-    }
-
-    .footer-bottom p {
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 0.875rem;
-    }
-
-    .honest-work {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        margin: 0 auto 16px;
-        background: none;
-        border: none;
-        padding: 8px 16px;
-        border-radius: 12px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .honest-work:hover {
-        background: rgba(255, 255, 255, 0.08);
-    }
-
-    .honest-text {
-        font-style: italic;
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 0.9rem;
-        transition: color 0.3s;
-    }
-
-    .honest-work:hover .honest-text {
-        color: rgba(255, 255, 255, 0.9);
-    }
-
-    .copyright {
-        color: rgba(255, 255, 255, 0.4);
-        font-size: 0.8rem;
-    }
-
-    .copyright a {
-        color: rgba(255, 255, 255, 0.5);
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-
-    .copyright a:hover {
-        color: var(--color-primary);
-    }
-
-    .author-link {
-        color: var(--color-primary) !important;
-        font-weight: 500;
-    }
-
-    .author-link:hover {
-        text-decoration: underline;
-    }
-
-    .farmer-icon {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: center 25%;
-        opacity: 0.9;
-        transition: all 0.3s ease;
-    }
-
-    .honest-work:hover .farmer-icon {
-        opacity: 1;
-        transform: scale(1.15) rotate(-3deg);
-    }
-
-    /* Modal del meme */
-    .meme-modal {
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 24px;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-
-    .meme-modal.active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .meme-overlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.85);
-        backdrop-filter: blur(8px);
-    }
-
-    .meme-content {
-        position: relative;
-        background: white;
-        border-radius: 24px;
-        max-width: 480px;
-        width: 100%;
-        overflow: hidden;
-        transform: scale(0.8) translateY(40px);
-        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
-    }
-
-    .meme-modal.active .meme-content {
-        transform: scale(1) translateY(0);
-    }
-
-    .meme-close {
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        width: 36px;
-        height: 36px;
-        background: rgba(0, 0, 0, 0.6);
-        border: none;
-        border-radius: 50%;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.2s;
-        z-index: 1;
-    }
-
-    .meme-close:hover {
-        background: rgba(0, 0, 0, 0.8);
-        transform: scale(1.1);
-    }
-
-    .meme-image {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .meme-info {
-        padding: 24px;
-    }
-
-    .meme-info h3 {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: #1a1a1a;
-        margin-bottom: 12px;
-    }
-
-    .meme-info p {
-        color: #4b5563;
-        font-size: 0.95rem;
-        line-height: 1.7;
-        margin-bottom: 12px;
-    }
-
-    .meme-info strong {
-        color: #1a1a1a;
-    }
-
-    .meme-signature {
-        font-style: italic;
-        color: #128C3E !important;
-        font-weight: 500;
-        margin-top: 16px;
-        margin-bottom: 0 !important;
-    }
-
-    @media (max-width: 500px) {
-        .meme-content {
-            border-radius: 16px;
-        }
-
-        .meme-info {
-            padding: 20px;
-        }
-
-        .meme-info h3 {
-            font-size: 1.1rem;
-        }
-
-        .meme-info p {
-            font-size: 0.9rem;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .footer-content {
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-
-        .footer-links {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    /* Stars explosion animation */
-    .stars-container {
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        z-index: 10000;
-        overflow: hidden;
-    }
-
-    .star {
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        opacity: 0;
-    }
-
-    .star::before,
-    .star::after {
-        content: '';
-        position: absolute;
-        background: currentColor;
-    }
-
-    .star::before {
-        width: 100%;
-        height: 40%;
-        top: 30%;
-        left: 0;
-        border-radius: 2px;
-    }
-
-    .star::after {
-        width: 40%;
-        height: 100%;
-        top: 0;
-        left: 30%;
-        border-radius: 2px;
-    }
-
-    .star.animating {
-        animation: starExplode 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    }
-
-    @keyframes starExplode {
-        0% {
-            opacity: 1;
-            transform: translate(0, 0) scale(0) rotate(0deg);
-        }
-        15% {
-            opacity: 1;
-            transform: translate(var(--tx), var(--ty)) scale(1.2) rotate(90deg);
-        }
-        50% {
-            opacity: 1;
-            transform: translate(calc(var(--tx) * 2), calc(var(--ty) * 2)) scale(1) rotate(180deg);
-        }
-        100% {
-            opacity: 0;
-            transform: translate(calc(var(--tx) * 3), calc(var(--ty) * 3 + 100px)) scale(0.3) rotate(360deg);
-        }
-    }
-
-    .sparkle {
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        background: currentColor;
-        border-radius: 50%;
-        opacity: 0;
-        box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
-    }
-
-    .sparkle.animating {
-        animation: sparkleExplode 1.2s ease-out forwards;
-    }
-
-    @keyframes sparkleExplode {
-        0% {
-            opacity: 1;
-            transform: translate(0, 0) scale(0);
-        }
-        30% {
-            opacity: 1;
-            transform: translate(var(--tx), var(--ty)) scale(1.5);
-        }
-        100% {
-            opacity: 0;
-            transform: translate(calc(var(--tx) * 2.5), calc(var(--ty) * 2.5 + 50px)) scale(0);
-        }
-    }
-
-    .glow-ring {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 10px;
-        height: 10px;
-        border: 3px solid #FFD700;
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0;
-    }
-
-    .glow-ring.animating {
-        animation: ringExpand 0.8s ease-out forwards;
-    }
-
-    @keyframes ringExpand {
-        0% {
-            opacity: 0.8;
-            width: 10px;
-            height: 10px;
-            border-width: 4px;
-        }
-        100% {
-            opacity: 0;
-            width: 600px;
-            height: 600px;
-            border-width: 1px;
-        }
-    }
-</style>
+<!-- Floating CTA for mobile -->
+<a class="float-cta" id="floatCta" href="#descargar">
+  <span>Descarga Grupero gratis</span>
+  <span class="arr">→</span>
+</a>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('honestWorkBtn');
-    const modal = document.getElementById('memeModal');
-    const overlay = document.getElementById('memeOverlay');
-    const closeBtn = document.getElementById('memeClose');
-    const starsContainer = document.getElementById('starsContainer');
-
-    const colors = ['#FFD700', '#FFA500', '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9'];
-
-    function createStarExplosion() {
-        if (!starsContainer) return;
-
-        const centerX = window.innerWidth / 2;
-        const centerY = window.innerHeight / 2;
-
-        // Create expanding glow rings
-        for (let r = 0; r < 3; r++) {
-            setTimeout(() => {
-                const ring = document.createElement('div');
-                ring.className = 'glow-ring';
-                ring.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
-                starsContainer.appendChild(ring);
-
-                requestAnimationFrame(() => ring.classList.add('animating'));
-
-                setTimeout(() => ring.remove(), 1000);
-            }, r * 150);
-        }
-
-        // Create stars
-        const numStars = 40;
-        for (let i = 0; i < numStars; i++) {
-            setTimeout(() => {
-                const star = document.createElement('div');
-                star.className = 'star';
-
-                const angle = (Math.PI * 2 * i) / numStars + (Math.random() - 0.5) * 0.5;
-                const distance = 80 + Math.random() * 120;
-                const tx = Math.cos(angle) * distance;
-                const ty = Math.sin(angle) * distance;
-
-                star.style.left = centerX + 'px';
-                star.style.top = centerY + 'px';
-                star.style.color = colors[Math.floor(Math.random() * colors.length)];
-                star.style.setProperty('--tx', tx + 'px');
-                star.style.setProperty('--ty', ty + 'px');
-                star.style.width = (8 + Math.random() * 12) + 'px';
-                star.style.height = star.style.width;
-
-                starsContainer.appendChild(star);
-                requestAnimationFrame(() => star.classList.add('animating'));
-
-                setTimeout(() => star.remove(), 1600);
-            }, Math.random() * 200);
-        }
-
-        // Create sparkles
-        const numSparkles = 60;
-        for (let i = 0; i < numSparkles; i++) {
-            setTimeout(() => {
-                const sparkle = document.createElement('div');
-                sparkle.className = 'sparkle';
-
-                const angle = Math.random() * Math.PI * 2;
-                const distance = 60 + Math.random() * 150;
-                const tx = Math.cos(angle) * distance;
-                const ty = Math.sin(angle) * distance;
-
-                sparkle.style.left = centerX + 'px';
-                sparkle.style.top = centerY + 'px';
-                sparkle.style.color = colors[Math.floor(Math.random() * colors.length)];
-                sparkle.style.setProperty('--tx', tx + 'px');
-                sparkle.style.setProperty('--ty', ty + 'px');
-                sparkle.style.width = (3 + Math.random() * 6) + 'px';
-                sparkle.style.height = sparkle.style.width;
-
-                starsContainer.appendChild(sparkle);
-                requestAnimationFrame(() => sparkle.classList.add('animating'));
-
-                setTimeout(() => sparkle.remove(), 1300);
-            }, Math.random() * 300);
-        }
-    }
-
-    function openModal() {
-        modal?.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        createStarExplosion();
-    }
-
-    function closeModal() {
-        modal?.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    btn?.addEventListener('click', openModal);
-    overlay?.addEventListener('click', closeModal);
-    closeBtn?.addEventListener('click', closeModal);
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal?.classList.contains('active')) {
-            closeModal();
-        }
-    });
-});
+  const floatCta = document.getElementById('floatCta');
+  window.addEventListener('scroll', () => {
+    floatCta.classList.toggle('show', window.scrollY > 600);
+  });
 </script>
+

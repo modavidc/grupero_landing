@@ -4,120 +4,112 @@ import HelpLayout from '../layouts/HelpLayout.astro';
 
 <HelpLayout title="Preguntas Frecuentes" description="Respuestas rápidas a las preguntas más comunes sobre Grupero.">
 
-    <!-- Hero -->
-    <section class="help-hero" style="padding: 60px 24px;">
+    <section class="help-hero">
         <div class="help-hero-content">
             <h1>Preguntas Frecuentes</h1>
             <p>Respuestas rápidas a las dudas más comunes</p>
         </div>
     </section>
 
-    <section class="help-article" style="padding-top: 40px;">
-        <div class="help-content">
+    <section class="help-article" style="padding-top:48px">
+        <div class="faq-page">
 
-            <h2>General</h2>
-
-            <div class="faq-item">
-                <h3>¿Qué es Grupero?</h3>
-                <p>Grupero es la radiografía de tus grupos de WhatsApp. Te muestra quién escribe e interactúa, quién va a las actividades, quién aporta cuando hay cumpleaños u organiza eventos, quién comparte contenido... y también quién solo está por estar o dejó de participar hace tiempo.</p>
+            <div class="faq-group">
+                <p class="faq-group-label">General</p>
+                <div class="faq">
+                    <div class="faq-item open">
+                        <button class="faq-q">¿Qué es Grupero?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">Grupero es la radiografía de tus grupos de WhatsApp. Te muestra quién escribe e interactúa, quién va a las actividades, quién aporta cuando hay cumpleaños u organiza eventos, quién comparte contenido... y también quién solo está por estar o dejó de participar hace tiempo.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">¿Es gratis?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">Sí, puedes usar Grupero gratis con <strong>1 análisis por mes</strong>. Para análisis ilimitados y funciones avanzadas como resúmenes con IA, existe la versión <a href="/#precios">Pro</a>.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">¿Viola los términos de WhatsApp?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">No. Grupero usa la función oficial de "Exportar chat" de WhatsApp. No accedemos a tu cuenta, no instalamos bots y no intervenimos tus mensajes de ninguna forma.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">¿Funciona con grupos grandes?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">Sí. Grupero está diseñado para grupos de hasta 1,024 miembros (el límite de WhatsApp). Funciona especialmente bien para grupos de 100+ personas donde es difícil hacer seguimiento manual.</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="faq-item">
-                <h3>¿Es gratis?</h3>
-                <p>Sí, puedes usar Grupero gratis con <strong>1 análisis por mes</strong>. Para análisis ilimitados y funciones avanzadas como resúmenes con IA, existe la versión <a href="/#precios">Pro</a>.</p>
+            <div class="faq-group">
+                <p class="faq-group-label">Privacidad</p>
+                <div class="faq">
+                    <div class="faq-item">
+                        <button class="faq-q">¿Mis conversaciones son privadas?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">Sí, 100%. Todo el análisis se hace <strong>localmente en tu dispositivo</strong>. Tus mensajes nunca se suben a ningún servidor. Ni siquiera nosotros podemos ver tus chats.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">¿Qué datos recopilan?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">No recopilamos tus conversaciones. Solo guardamos datos anónimos y agregados (como número de instalaciones) para mejorar la app. Nunca vendemos ni compartimos datos.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">¿Necesito crear una cuenta?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">No. Grupero funciona sin cuenta. Si te suscribes a Pro, la cuenta es gestionada por Google Play o App Store, no por nosotros.</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="faq-item">
-                <h3>¿Viola los términos de WhatsApp?</h3>
-                <p>No. Grupero usa la función oficial de "Exportar chat" de WhatsApp. No accedemos a tu cuenta, no instalamos bots y no intervenimos tus mensajes de ninguna forma.</p>
+            <div class="faq-group">
+                <p class="faq-group-label">Funcionalidad</p>
+                <div class="faq">
+                    <div class="faq-item">
+                        <button class="faq-q">¿Cuántos mensajes puede analizar?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">WhatsApp limita la exportación a los últimos <strong>40,000 mensajes</strong>. Grupero puede analizar todos los mensajes exportados sin problema. En grupos muy activos, esto puede representar solo algunos meses de historial.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">¿Cómo mide la "participación real"?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">No solo contamos mensajes. Analizamos: actividad regular, participación en eventos mencionados, aportes en fechas especiales, colaboración activa, tiempo de respuesta, y más.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">¿Funciona sin internet?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">El análisis básico funciona 100% offline. Solo las funciones de IA (resúmenes inteligentes) en la versión Pro requieren conexión a internet.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">¿Detecta eventos automáticamente?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">Sí. Grupero busca patrones de convocatorias (fechas, horas, preguntas de confirmación) y rastrea quién confirmó, quién rechazó y quién no respondió.</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="faq-item">
-                <h3>¿Funciona con grupos grandes?</h3>
-                <p>Sí. Grupero está diseñado para grupos de hasta 1,024 miembros (el límite de WhatsApp). Funciona especialmente bien para grupos de 100+ personas donde es difícil hacer seguimiento manual.</p>
+            <div class="faq-group">
+                <p class="faq-group-label">Planes y Pagos</p>
+                <div class="faq">
+                    <div class="faq-item">
+                        <button class="faq-q">¿Cuánto cuesta Grupero Pro?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">Consulta los precios actuales en nuestra <a href="/#precios">página de precios</a>. Ofrecemos plan mensual y anual (con descuento de 17%).</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">¿Cómo cancelo mi suscripción?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">Puedes cancelar en cualquier momento desde Google Play Store › Pagos y suscripciones › Suscripciones › Grupero. Conservas el acceso hasta el fin del período pagado.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">¿Hay reembolsos?<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">Sí. Google Play ofrece reembolso dentro de las primeras 48 horas. Después, <a href="/contacto">contáctanos</a> y lo evaluamos caso por caso.</div>
+                    </div>
+                </div>
             </div>
 
-            <h2>Privacidad</h2>
-
-            <div class="faq-item">
-                <h3>¿Mis conversaciones son privadas?</h3>
-                <p>Sí, 100%. Todo el análisis se hace <strong>localmente en tu dispositivo</strong>. Tus mensajes nunca se suben a ningún servidor. Ni siquiera nosotros podemos ver tus chats.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>¿Qué datos recopilan?</h3>
-                <p>No recopilamos tus conversaciones. Solo guardamos datos anónimos y agregados (como número de instalaciones) para mejorar la app. Nunca vendemos ni compartimos datos.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>¿Necesito crear una cuenta?</h3>
-                <p>No. Grupero funciona sin cuenta. Si te suscribes a Pro, la cuenta es gestionada por Google Play o App Store, no por nosotros.</p>
-            </div>
-
-            <h2>Funcionalidad</h2>
-
-            <div class="faq-item">
-                <h3>¿Cuántos mensajes puede analizar?</h3>
-                <p>WhatsApp limita la exportación a los últimos <strong>40,000 mensajes</strong>. Grupero puede analizar todos los mensajes exportados sin problema. En grupos muy activos, esto puede representar solo algunos meses de historial.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>¿Cómo mide la "participación real"?</h3>
-                <p>No solo contamos mensajes. Analizamos: actividad regular, participación en eventos mencionados, aportes en fechas especiales, colaboración activa, tiempo de respuesta, y más.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>¿Funciona sin internet?</h3>
-                <p>El análisis básico funciona 100% offline. Solo las funciones de IA (resúmenes inteligentes) en la versión Pro requieren conexión a internet.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>¿Puedo analizar chats individuales (1 a 1)?</h3>
-                <p>Grupero está optimizado para <strong>grupos</strong>. Aunque técnicamente puedes analizar chats individuales, las funciones más útiles (rankings, eventos, salud del grupo) están diseñadas para comunidades.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>¿Detecta eventos automáticamente?</h3>
-                <p>Sí. Grupero busca patrones de convocatorias (fechas, horas, preguntas de confirmación) y rastrea quién confirmó, quién rechazó y quién no respondió.</p>
-            </div>
-
-            <h2>Planes y Pagos</h2>
-
-            <div class="faq-item">
-                <h3>¿Cuánto cuesta Grupero Pro?</h3>
-                <p>Consulta los precios actuales en nuestra <a href="/#precios">página de precios</a>. Ofrecemos plan mensual y anual (con descuento).</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>¿Cómo cancelo mi suscripción?</h3>
-                <p>Puedes cancelar en cualquier momento desde Google Play Store > Pagos y suscripciones > Suscripciones > Grupero, o desde Ajustes > Apple ID > Suscripciones en iPhone.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>¿Hay reembolsos?</h3>
-                <p>Sí. Google Play ofrece reembolso dentro de las primeras 48 horas. App Store tiene políticas similares. Después, contáctanos y evaluamos caso por caso.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>¿Puedo cambiar de plan mensual a anual?</h3>
-                <p>Sí. Cancela el plan actual y suscríbete al nuevo. O cámbialo directamente desde la tienda de apps.</p>
-            </div>
-
-            <h2>Problemas Comunes</h2>
-
-            <div class="faq-item">
-                <h3>El archivo no se reconoce</h3>
-                <p>Asegúrate de exportar desde WhatsApp oficial usando "Exportar chat". El archivo debe ser .zip o .txt. Si el problema persiste, intenta exportar sin archivos multimedia.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>Faltan mensajes en el análisis</h3>
-                <p>Es normal. WhatsApp solo exporta los últimos 40,000 mensajes. En grupos muy activos, esto puede ser solo algunos meses de historial.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>La app se cierra al analizar</h3>
-                <p>Grupos muy grandes requieren más memoria. Cierra otras apps, reinicia el teléfono e intenta nuevamente. Asegúrate de tener la última versión de Grupero.</p>
+            <div class="faq-group">
+                <p class="faq-group-label">Problemas comunes</p>
+                <div class="faq">
+                    <div class="faq-item">
+                        <button class="faq-q">El archivo no se reconoce<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">Asegúrate de exportar desde WhatsApp oficial usando "Exportar chat". El archivo debe ser <code>.zip</code> o <code>.txt</code>. Si el problema persiste, intenta exportar sin archivos multimedia.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Faltan mensajes en el análisis<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">Es normal. WhatsApp solo exporta los últimos 40,000 mensajes. En grupos muy activos, esto puede ser solo algunos meses de historial.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">La app se cierra al analizar<span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+                        <div class="faq-a">Grupos muy grandes requieren más memoria. Cierra otras apps, reinicia el teléfono e intenta nuevamente. Asegúrate de tener la última versión de Grupero.</div>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -125,52 +117,37 @@ import HelpLayout from '../layouts/HelpLayout.astro';
         <div class="related-articles">
             <h3>¿Necesitas más ayuda?</h3>
             <div class="related-list">
-                <a href="/ayuda" class="related-item">
-                    <span>📚</span> Centro de Ayuda completo
-                </a>
-                <a href="/ayuda/errores-comunes" class="related-item">
-                    <span>🔧</span> Solucionar errores comunes
-                </a>
-                <a href="/contacto" class="related-item">
-                    <span>📧</span> Contactar soporte
-                </a>
+                <a href="/ayuda" class="related-item"><span>📚</span> Centro de Ayuda completo</a>
+                <a href="/contacto" class="related-item"><span>📧</span> Contactar soporte</a>
             </div>
         </div>
     </section>
 
     <section class="help-cta">
         <h2>¿No encontraste tu respuesta?</h2>
-        <p>Visita nuestro Centro de Ayuda completo o contáctanos</p>
-        <a href="/ayuda" class="btn">Ir al Centro de Ayuda</a>
+        <p>Escríbenos directamente. Moisés responde personalmente en &lt;24h.</p>
+        <a href="/contacto" class="btn">Contactar →</a>
     </section>
 
 </HelpLayout>
 
 <style>
-    .faq-item {
-        margin-bottom: 32px;
-        padding-bottom: 24px;
-        border-bottom: 1px solid #e5e7eb;
-    }
-
-    .faq-item:last-of-type {
-        border-bottom: none;
-    }
-
-    .faq-item h3 {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #1a1a1a;
-        margin-bottom: 8px;
-    }
-
-    .faq-item p {
-        color: #4b5563;
-        line-height: 1.7;
-    }
-
-    .faq-item a {
-        color: #128C3E;
-        text-decoration: underline;
+    .faq-page { max-width: 700px; margin: 0 auto; }
+    .faq-group { margin-bottom: 40px; }
+    .faq-group-label {
+        font-size: 11px; font-weight: 700; letter-spacing: .18em;
+        text-transform: uppercase; color: var(--muted);
+        margin-bottom: 4px;
     }
 </style>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item?.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+            if (!isOpen) item?.classList.add('open');
+        });
+    });
+</script>

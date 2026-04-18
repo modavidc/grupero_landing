@@ -1,0 +1,47 @@
+---
+---
+
+<!-- iOS WAITLIST MODAL -->
+<div class="modal-overlay" id="iosModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <span class="modal-icon">🍎</span>
+    <h3 id="modalTitle">Avísame cuando llegue a iOS</h3>
+    <p>Sin spam — solo un email el día del lanzamiento.</p>
+    <form class="modal-form" id="iosForm">
+      <input type="email" placeholder="tu@email.com" required class="modal-input" autocomplete="email" />
+      <button type="submit" class="btn btn-accent btn-lg" style="justify-content:center">Apuntarme →</button>
+    </form>
+    <p class="modal-note">Sé de los primeros en tener Grupero en iPhone.</p>
+  </div>
+</div>
+
+<script>
+  const iosModal = document.getElementById('iosModal');
+  const iosTriggers = document.querySelectorAll('.store-btn-ios');
+  const modalClose = document.getElementById('modalClose');
+  const iosForm = document.getElementById('iosForm');
+
+  function openModal() {
+    iosModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => modalClose.focus(), 50);
+  }
+  function closeModal() {
+    iosModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  iosTriggers.forEach(btn => btn.addEventListener('click', openModal));
+  modalClose.addEventListener('click', closeModal);
+  iosModal.addEventListener('click', e => { if (e.target === iosModal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  iosForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const email = iosForm.querySelector('input').value;
+    iosForm.innerHTML = `<p class="modal-success">✓ Listo. Te avisamos a <strong>${email}</strong> el día del lanzamiento.</p>`;
+  });
+</script>

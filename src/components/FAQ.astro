@@ -1,131 +1,58 @@
 ---
-const items = [
-    {
-        q: "¿Viola los términos de WhatsApp?",
-        a: "No. Grupero usa la función oficial de \"Exportar chat\" de WhatsApp. No accedemos a tu cuenta, no instalamos bots y no intervenimos tus mensajes de ninguna forma."
-    },
-    {
-        q: "¿Mis conversaciones son privadas?",
-        a: "Sí, 100%. Todo el análisis se hace localmente en tu dispositivo. Tus mensajes nunca se suben a ningún servidor. Ni siquiera nosotros podemos ver tus chats."
-    },
-    {
-        q: "¿Necesito crear una cuenta?",
-        a: "No. Grupero funciona sin cuenta. Si te suscribes a Pro, la cuenta es gestionada por Google Play — no por nosotros."
-    },
-    {
-        q: "¿Funciona con grupos grandes?",
-        a: "Sí. Grupero está diseñado para grupos de hasta 1,024 miembros (el límite de WhatsApp). Funciona especialmente bien para grupos de 100+ personas."
-    },
-    {
-        q: "¿Funciona sin internet?",
-        a: "El análisis básico funciona 100% offline. Solo las funciones de IA (resúmenes inteligentes) en la versión Pro requieren conexión."
-    },
-    {
-        q: "¿Cómo mide la \"participación real\"?",
-        a: "No solo contamos mensajes. Analizamos actividad regular, participación en eventos, aportes en fechas especiales, tiempo de respuesta y más."
-    },
-    {
-        q: "¿Cuántos mensajes puede analizar?",
-        a: "WhatsApp exporta hasta 40,000 mensajes. Grupero analiza todos sin problema. En grupos muy activos puede representar algunos meses de historial."
-    },
-    {
-        q: "¿Es gratis de verdad?",
-        a: "Sí. El plan Gratis incluye análisis ilimitados con las funciones principales. No necesitas tarjeta. La IA corre en tu teléfono, por eso podemos ofrecerlo gratis."
-    }
-];
 ---
 
-<section class="faq" id="faq">
-    <div class="container">
-        <h2 class="section-title">Preguntas frecuentes</h2>
-        <p class="section-subtitle">Lo que nos preguntan antes de descargar</p>
-        <div class="faq-list">
-            {items.map((item, i) => (
-                <details class="faq-item" open={i === 0}>
-                    <summary class="faq-question">
-                        <span>{item.q}</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </summary>
-                    <p class="faq-answer">{item.a}</p>
-                </details>
-            ))}
-        </div>
-        <p class="faq-more">
-            ¿Más dudas? <a href="/faq">Ver todas las preguntas →</a>
-        </p>
+<section id="faq">
+  <div class="wrap-sm">
+    <div class="sec-head center">
+      <div>
+        <span class="kicker kicker-dot">Preguntas comunes</span>
+        <h2>Lo que los admins preguntan antes de descargar.</h2>
+      </div>
     </div>
+    <div class="faq">
+      <div class="faq-item open">
+        <button class="faq-q">¿Funciona con grupos grandes de hasta 1024 miembros? <span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a">Sí. Grupero está diseñado para manejar hasta el máximo de WhatsApp (1,024 miembros) y hasta 3 millones de mensajes en un solo chat. El análisis toma entre 20s y 2 minutos según el tamaño.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Me pueden banear de WhatsApp por usar Grupero? <span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a">No. Grupero usa la función oficial de exportación de chat de WhatsApp — es una acción legítima que hace el propio usuario. No nos conectamos a WhatsApp, no usamos su API, no hacemos scraping.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Funciona sin conexión a internet? <span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a">Sí. Todo el análisis — incluyendo la IA — corre en tu teléfono. Puedes analizar un chat en modo avión. La única excepción es la compra del plan Pro, que requiere conexión una vez.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Qué pasa con mis datos después de cerrar la app? <span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a">Los resultados analizados se guardan localmente en el storage de la app (puedes borrarlos cuando quieras). El <code>.zip</code> original se descarta inmediatamente después del parseo — no se conserva.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Puedo analizar varios grupos a la vez? <span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a">Sí. En los planes Gratis y Pro puedes tener múltiples grupos analizados al mismo tiempo. El plan Teams añade análisis <em>comparativo</em> entre grupos (perfiles multi-grupo, tendencias cruzadas).</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Los miembros del grupo saben que analicé el chat? <span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a">No. Grupero trabaja con un archivo local — WhatsApp no tiene manera de saber qué haces con tu export. Recomendamos, eso sí, ser transparente con tu grupo sobre las métricas que usas para decidir.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Cuándo llega para iPhone? <span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a">En desarrollo. Regístrate en la waitlist de iOS desde el botón "Próximamente" para recibir aviso el día del lanzamiento. Sin spam, solo el aviso.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Puedo cancelar el plan Pro cuando quiera? <span class="faq-plus"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a">Sí, sin preguntas. Las compras se manejan por Google Play — cancelas con un tap y mantienes Pro hasta el final del ciclo que ya pagaste. Después vuelves a Gratis sin perder tus análisis.</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<style>
-    .faq {
-        padding: 100px 0;
-        background: var(--color-white);
-    }
-
-    .faq-list {
-        max-width: 720px;
-        margin: 48px auto 0;
-    }
-
-    .faq-item {
-        border-bottom: 1px solid var(--color-border);
-    }
-
-    .faq-item:first-child {
-        border-top: 1px solid var(--color-border);
-    }
-
-    .faq-question {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
-        font-size: 1rem;
-        font-weight: 600;
-        color: var(--color-text);
-        cursor: pointer;
-        list-style: none;
-        gap: 16px;
-    }
-
-    .faq-question::-webkit-details-marker {
-        display: none;
-    }
-
-    .faq-icon {
-        font-size: 1.4rem;
-        font-weight: 300;
-        color: var(--color-primary-dark);
-        flex-shrink: 0;
-        transition: transform 0.2s ease;
-        line-height: 1;
-    }
-
-    details[open] .faq-icon {
-        transform: rotate(45deg);
-    }
-
-    .faq-answer {
-        padding: 0 0 20px;
-        color: var(--color-text-muted);
-        line-height: 1.7;
-        max-width: 640px;
-    }
-
-    .faq-more {
-        text-align: center;
-        margin-top: 40px;
-        font-size: 0.95rem;
-        color: var(--color-text-muted);
-    }
-
-    .faq-more a {
-        color: var(--color-primary-dark);
-        font-weight: 600;
-        text-decoration: none;
-    }
-
-    .faq-more a:hover {
-        text-decoration: underline;
-    }
-</style>
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>

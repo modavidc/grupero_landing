@@ -1,0 +1,176 @@
+---
+import HelpLayout from '../layouts/HelpLayout.astro';
+---
+
+<HelpLayout title="Changelog" description="Historial de versiones de Grupero. Qué hay de nuevo en cada actualización.">
+
+    <section class="help-article">
+        <nav class="breadcrumb">
+            <a href="/">Inicio</a>
+            <span>/</span>
+            <span>Changelog</span>
+        </nav>
+
+        <h1>Changelog</h1>
+        <p class="article-meta">Historial de versiones · Android</p>
+
+        <div class="help-content">
+
+            <div class="cl-entry">
+                <div class="cl-header">
+                    <span class="cl-version">v1.0.0</span>
+                    <span class="cl-badge cl-badge-stable">Estable</span>
+                    <span class="cl-date">Abril 2026</span>
+                </div>
+                <p class="cl-summary">Primera versión pública de Grupero para Android.</p>
+                <div class="cl-section">
+                    <h3>Análisis de participantes</h3>
+                    <ul>
+                        <li>Ranking de mensajes, palabras y caracteres por persona</li>
+                        <li>Clasificación de actividad: Activo · Esporádico · Observador silencioso · Inactivo</li>
+                        <li>Tiempo promedio de respuesta por participante</li>
+                        <li>Quién inicia las conversaciones con más frecuencia</li>
+                    </ul>
+                </div>
+                <div class="cl-section">
+                    <h3>Análisis temporal</h3>
+                    <ul>
+                        <li>Heatmap de actividad por hora y día de la semana</li>
+                        <li>Tendencia mensual de mensajes</li>
+                        <li>Días y horarios pico del grupo</li>
+                    </ul>
+                </div>
+                <div class="cl-section">
+                    <h3>Salud del grupo</h3>
+                    <ul>
+                        <li>Score de salud general (0–100) con semáforo verde/amarillo/rojo</li>
+                        <li>Alertas de silencio para miembros que dejaron de participar</li>
+                        <li>Sugerencia de lista de purga (miembros inactivos)</li>
+                    </ul>
+                </div>
+                <div class="cl-section">
+                    <h3>Grupos deportivos</h3>
+                    <ul>
+                        <li>Clasificación: Los Fijos · Los Probables · Los Riesgosos · Los Chancletas</li>
+                        <li>Ghost Score y Fill Rate por evento</li>
+                        <li>Historial de asistencia por participante</li>
+                    </ul>
+                </div>
+                <div class="cl-section">
+                    <h3>Privacidad</h3>
+                    <ul>
+                        <li>Todo el procesamiento ocurre 100% en tu dispositivo</li>
+                        <li>Sin servidores, sin registro, sin internet requerido para el análisis</li>
+                    </ul>
+                </div>
+                <div class="cl-section">
+                    <h3>Plan Pro</h3>
+                    <ul>
+                        <li>Resúmenes con IA (on-device)</li>
+                        <li>Análisis ilimitados de grupos</li>
+                        <li>Exportación en PDF, CSV e imagen</li>
+                        <li>Detección automática de eventos y RSVP</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="related-articles">
+            <h3>También te puede interesar</h3>
+            <div class="related-list">
+                <a href="/ayuda" class="related-item">
+                    <span>📖</span> Centro de ayuda
+                </a>
+                <a href="/privacidad" class="related-item">
+                    <span>🔒</span> Política de privacidad
+                </a>
+                <a href="/contacto" class="related-item">
+                    <span>📧</span> Contacto
+                </a>
+            </div>
+        </div>
+    </section>
+
+</HelpLayout>
+
+<style is:global>
+    .cl-entry {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 28px 32px;
+        margin-bottom: 32px;
+        background: var(--paper);
+    }
+
+    .cl-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+    }
+
+    .cl-version {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--ink);
+        letter-spacing: -.02em;
+    }
+
+    .cl-badge {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 20px;
+    }
+
+    .cl-badge-stable {
+        background: var(--chip);
+        color: var(--brand);
+    }
+
+    .cl-badge-beta {
+        background: #FEF3C7;
+        color: #92400E;
+    }
+
+    .cl-date {
+        font-size: 14px;
+        color: var(--ink-3);
+        margin-left: auto;
+    }
+
+    .cl-summary {
+        color: var(--ink-2);
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .cl-section {
+        margin-bottom: 16px;
+    }
+
+    .cl-section h3 {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+        color: var(--ink-3);
+        margin-bottom: 8px;
+    }
+
+    .cl-section ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .cl-section li {
+        font-size: 15px;
+        color: var(--ink-2);
+        margin-bottom: 4px;
+        line-height: 1.5;
+    }
+</style>

@@ -1,131 +1,36 @@
 ---
-const steps = [
-    {
-        icon: "📂",
-        title: "Tu archivo nunca sale del teléfono",
-        body: "Exportas el chat desde WhatsApp y lo abres con Grupero. El .zip se procesa localmente y se descarta al cerrar el análisis. No hay subida a ningún servidor."
-    },
-    {
-        icon: "🤖",
-        title: "IA que corre en tu dispositivo",
-        body: "Los resúmenes y respuestas inteligentes usan modelos de IA on-device (Gemini Nano). El modelo corre en tu teléfono, no en la nube. Ni nosotros vemos tus mensajes."
-    },
-    {
-        icon: "🚫",
-        title: "Sin servidores, sin cuentas",
-        body: "Grupero no tiene backend propio. No hay base de datos con tus chats, no hay login, no hay sesión que hackear. La app es el único lugar donde existe tu análisis."
-    },
-    {
-        icon: "🔍",
-        title: "Código auditable",
-        body: "¿No nos crees? Puedes revisar nuestra política de privacidad con detalle técnico o contactarnos si tienes preguntas específicas sobre el modelo de datos."
-    }
-];
 ---
 
-<section class="privacy-explainer" id="privacidad-tecnica">
-    <div class="container">
-        <div class="privacy-header">
-            <span class="privacy-tag">Privacidad técnica</span>
-            <h2 class="section-title">Cómo protegemos tus datos</h2>
-            <p class="section-subtitle">
-                Le pides a tus miembros privacidad. Nosotros te la garantizamos a ti.
-            </p>
+<section>
+  <div class="wrap">
+    <div class="privacy">
+      <div style="max-width:680px">
+        <span class="kicker" style="color:var(--accent);margin-bottom:16px;display:block">● Privacidad por diseño</span>
+        <h2>Tus chats <em>nunca</em> salen de tu teléfono.</h2>
+        <p class="lead">Grupero no es una app "en la nube que dice ser privada". Literalmente no tenemos servidores procesando tus datos. Así funciona:</p>
+      </div>
+      <div class="privacy-grid">
+        <div class="priv-card">
+          <div class="priv-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+          <h4>Cero servidores</h4>
+          <p>No tenemos backend. Tu <code style="font-family:var(--f-mono);color:var(--accent)">.zip</code> se procesa en la CPU de tu teléfono y desaparece cuando cierras la app.</p>
         </div>
-        <div class="privacy-grid">
-            {steps.map(step => (
-                <div class="privacy-card">
-                    <span class="privacy-icon">{step.icon}</span>
-                    <h3>{step.title}</h3>
-                    <p>{step.body}</p>
-                </div>
-            ))}
+        <div class="priv-card">
+          <div class="priv-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
+          <h4>IA on-device</h4>
+          <p>Modelos ligeros corriendo en tu dispositivo con MLKit y Gemini Nano. Cero llamadas de red durante el análisis.</p>
         </div>
-        <div class="privacy-footer">
-            <a href="/privacidad" class="privacy-link">Leer política de privacidad completa →</a>
+        <div class="priv-card">
+          <div class="priv-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg></div>
+          <h4>Sin cuenta, sin email</h4>
+          <p>No te pedimos registrarte. No hay tracking, ni analytics, ni telemetría opt-out.</p>
         </div>
+        <div class="priv-card">
+          <div class="priv-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h4>Código abierto del analizador</h4>
+          <p>El parser y los prompts de IA son públicos. Audita tú mismo qué procesamos y qué no.</p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
-
-<style>
-    .privacy-explainer {
-        padding: 100px 0;
-        background: #f0fdf4;
-        border-top: 1px solid #bbf7d0;
-        border-bottom: 1px solid #bbf7d0;
-    }
-
-    .privacy-header {
-        text-align: center;
-        margin-bottom: 56px;
-    }
-
-    .privacy-tag {
-        display: inline-block;
-        background: #dcfce7;
-        color: #15803d;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        padding: 6px 14px;
-        border-radius: 9999px;
-        margin-bottom: 16px;
-    }
-
-    .privacy-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-        max-width: 840px;
-        margin: 0 auto;
-    }
-
-    .privacy-card {
-        background: var(--color-white);
-        border-radius: var(--radius-lg);
-        padding: 32px;
-        border: 1px solid #bbf7d0;
-    }
-
-    .privacy-icon {
-        font-size: 2rem;
-        display: block;
-        margin-bottom: 16px;
-    }
-
-    .privacy-card h3 {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin-bottom: 10px;
-    }
-
-    .privacy-card p {
-        font-size: 0.95rem;
-        color: var(--color-text-muted);
-        line-height: 1.7;
-    }
-
-    .privacy-footer {
-        text-align: center;
-        margin-top: 40px;
-    }
-
-    .privacy-link {
-        color: #15803d;
-        font-weight: 600;
-        font-size: 0.95rem;
-        text-decoration: none;
-    }
-
-    .privacy-link:hover {
-        text-decoration: underline;
-    }
-
-    @media (max-width: 640px) {
-        .privacy-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
