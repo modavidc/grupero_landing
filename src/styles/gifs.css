@@ -6,29 +6,29 @@
 /* Shared */
 .gif{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--f-body);color:var(--ink)}
 .gif-progress{position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(0,0,0,.06)}
-.gif-progress::after{content:"";position:absolute;left:0;top:0;height:100%;background:var(--accent);animation:progress 6s linear infinite}
+.gif-progress::after{content:"";position:absolute;left:0;top:0;height:100%;background:var(--accent);animation:progress 8s linear infinite}
 @keyframes progress{0%{width:0}100%{width:100%}}
 
 /* =========================================
    GIF 1: HERO — "Drop the zip, get insights"
    ========================================= */
 .gif-hero{background:linear-gradient(180deg,#f0fdf4 0%,#dcfce7 100%)}
-.gif-hero .phone-frame{position:relative;width:72%;aspect-ratio:9/18;background:#1a1a1a;border-radius:36px;padding:8px;box-shadow:0 30px 60px -20px rgba(18,140,62,.35)}
+.gif-hero .phone-frame{position:relative;width:52%;aspect-ratio:9/18;background:#1a1a1a;border-radius:36px;padding:8px;box-shadow:0 30px 60px -20px rgba(18,140,62,.35)}
 .gif-hero .phone-screen{position:relative;width:100%;height:100%;background:#fff;border-radius:28px;overflow:hidden}
 .gif-hero .screen-header{position:absolute;top:0;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;font-size:10px;color:var(--ink);z-index:2;font-weight:600}
 .gif-hero .screen-header .r{display:flex;gap:3px;align-items:center}
 .gif-hero .screen-header .r::after{content:"";width:18px;height:9px;border:1px solid var(--ink);border-radius:2px;background:linear-gradient(90deg,var(--ink) 70%,transparent 70%);margin-left:2px}
 
 .gif-hero .scene{position:absolute;inset:44px 16px 16px;display:flex;flex-direction:column;opacity:0}
-.gif-hero .scene-1{animation:scene1 6s var(--ease) infinite}
-.gif-hero .scene-2{animation:scene2 6s var(--ease) infinite}
-.gif-hero .scene-3{animation:scene3 6s var(--ease) infinite}
-@keyframes scene1{0%,30%{opacity:1;transform:translateY(0)}34%,100%{opacity:0;transform:translateY(-12px)}}
-@keyframes scene2{0%,30%{opacity:0;transform:translateY(12px)}34%,63%{opacity:1;transform:translateY(0)}67%,100%{opacity:0;transform:translateY(-12px)}}
-@keyframes scene3{0%,63%{opacity:0;transform:translateY(12px)}67%,97%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+.gif-hero .scene-1{animation:scene1 8s var(--ease) infinite}
+.gif-hero .scene-2{animation:scene2 8s var(--ease) infinite}
+.gif-hero .scene-3{animation:scene3 8s var(--ease) infinite}
+@keyframes scene1{0%,18%{opacity:1;transform:translateY(0)}22%,100%{opacity:0;transform:translateY(-12px)}}
+@keyframes scene2{0%,20%{opacity:0;transform:translateY(12px)}24%,44%{opacity:1;transform:translateY(0)}48%,100%{opacity:0;transform:translateY(-12px)}}
+@keyframes scene3{0%,50%{opacity:0;transform:translateY(12px)}54%,97%{opacity:1;transform:translateY(0)}100%{opacity:0}}
 
 /* Scene 1: zip file drop */
-.gif-hero .zip{margin:auto;width:80px;height:96px;background:var(--chip);border:1.5px dashed var(--brand);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;animation:zipDrop 6s var(--ease) infinite}
+.gif-hero .zip{margin:auto;width:80px;height:96px;background:var(--chip);border:1.5px dashed var(--brand);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;animation:zipDrop 8s var(--ease) infinite}
 @keyframes zipDrop{0%{transform:translateY(-40px) scale(.8);opacity:0}15%{transform:translateY(0) scale(1);opacity:1}25%,30%{transform:translateY(0) scale(.95);opacity:1}}
 .gif-hero .zip-icon{width:32px;height:32px;background:var(--brand);border-radius:6px;display:grid;place-items:center;color:var(--accent);font-size:9px;font-weight:800}
 .gif-hero .zip-name{font-size:9px;color:var(--brand);font-weight:600}
@@ -42,21 +42,63 @@
 .gif-hero .proc-fill{height:100%;background:var(--brand);animation:fill 2s var(--ease) infinite}
 @keyframes fill{0%{width:0%}100%{width:100%}}
 
-/* Scene 3: dashboard */
-.gif-hero .score-ring{margin:auto auto 10px;width:90px;height:90px;position:relative}
-.gif-hero .score-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
-.gif-hero .score-ring .track{fill:none;stroke:var(--bg-2);stroke-width:8}
-.gif-hero .score-ring .prog{fill:none;stroke:var(--accent);stroke-width:8;stroke-linecap:round;stroke-dasharray:220;stroke-dashoffset:220;animation:scoreFill 1.2s var(--ease) 4.2s forwards}
-@keyframes scoreFill{to{stroke-dashoffset:44}}
-.gif-hero .score-num{position:absolute;inset:0;display:grid;place-items:center;font-size:26px;font-weight:800;color:var(--brand);opacity:0;animation:numIn .4s var(--ease) 4.6s forwards}
-@keyframes numIn{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
-
-.gif-hero .metrics{display:flex;gap:6px;padding:0 8px;justify-content:center}
-.gif-hero .metric{flex:1;max-width:54px;background:var(--bg-2);border-radius:8px;padding:6px 4px;text-align:center}
-.gif-hero .metric .n{font-size:14px;font-weight:800;color:var(--brand)}
-.gif-hero .metric.warn .n{color:var(--warn)}
-.gif-hero .metric.danger .n{color:var(--danger)}
-.gif-hero .metric .l{font-size:7px;color:var(--ink-3);letter-spacing:.04em;margin-top:2px;font-weight:600}
+/* Scene 3: análisis dashboard — ocupa toda la pantalla del teléfono */
+.gif-hero .scene-3{inset:44px 0 0;padding:0;overflow:hidden;justify-content:flex-start}
+/* header */
+.gif-hero .a3-hd{display:flex;align-items:center;gap:6px;padding:8px 10px 3px;border-bottom:1px solid var(--line)}
+.gif-hero .a3-back{font-size:11px;color:var(--ink-3);flex-shrink:0}
+.gif-hero .a3-gname{font-size:11px;font-weight:800;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gif-hero .a3-meta{font-size:7px;color:var(--ink-3);padding:3px 10px 0}
+/* sub-tabs */
+.gif-hero .a3-stabs{display:flex;gap:3px;padding:5px 6px;overflow:hidden;flex-shrink:0}
+.gif-hero .a3-stab{font-size:6.5px;font-weight:600;padding:3px 6px;border-radius:99px;background:var(--bg-2);color:var(--ink-3);white-space:nowrap;flex-shrink:0;line-height:1.2}
+.gif-hero .a3-stab.active{background:var(--brand);color:#fff}
+/* body — flex:1 para llenar el espacio restante */
+.gif-hero .a3-body{display:flex;flex-direction:column;gap:5px;padding:4px 8px 8px;flex:1;overflow:hidden}
+/* health card */
+.gif-hero .a3-health-card{display:flex;align-items:center;gap:10px;background:var(--bg-2);border-radius:10px;padding:9px 10px;flex-shrink:0}
+.gif-hero .a3-ring-wrap{position:relative;width:64px;height:64px;flex-shrink:0}
+.gif-hero .a3-ring-wrap svg{width:100%;height:100%;transform:rotate(-90deg)}
+.gif-hero .a3-ring-track{fill:none;stroke:var(--line);stroke-width:7}
+.gif-hero .a3-ring-prog{fill:none;stroke:var(--accent);stroke-width:7;stroke-linecap:round;stroke-dasharray:226;stroke-dashoffset:226;animation:a3RingFill 8s var(--ease) infinite}
+@keyframes a3RingFill{0%,52%{stroke-dashoffset:226}60%,97%{stroke-dashoffset:29}100%{stroke-dashoffset:226}}
+.gif-hero .a3-ring-label{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.gif-hero .a3-rn{font-size:18px;font-weight:800;color:var(--brand);animation:a3NumIn 8s var(--ease) infinite}
+@keyframes a3NumIn{0%,56%{opacity:0;transform:scale(.7)}63%,97%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.7)}}
+.gif-hero .a3-rd{font-size:7px;color:var(--ink-3);margin-top:1px;opacity:.6}
+.gif-hero .a3-health-info{flex:1;min-width:0}
+.gif-hero .a3-h3{font-size:9px;font-weight:700;color:var(--ink);margin-bottom:3px}
+.gif-hero .a3-badge{display:inline-block;font-size:7px;font-weight:700;background:var(--accent);color:var(--accent-ink);padding:2px 6px;border-radius:99px;margin-bottom:5px}
+.gif-hero .a3-traffic{display:flex;gap:8px}
+.gif-hero .a3-tl{display:flex;flex-direction:column;align-items:center;gap:2px}
+.gif-hero .a3-td{width:8px;height:8px;border-radius:50%}
+.gif-hero .a3-td.g{background:#22c55e;box-shadow:0 0 0 2px rgba(34,197,94,.2)}
+.gif-hero .a3-td.y{background:var(--warn);box-shadow:0 0 0 2px rgba(245,158,11,.2)}
+.gif-hero .a3-td.r{background:var(--danger);box-shadow:0 0 0 2px rgba(239,68,68,.2)}
+.gif-hero .a3-tn{font-size:11px;font-weight:800;color:var(--ink)}
+.gif-hero .a3-tl2{font-size:6px;color:var(--ink-3);font-weight:600}
+/* stats grid — 2×2 */
+.gif-hero .a3-stats{display:grid;grid-template-columns:1fr 1fr;gap:4px;flex-shrink:0}
+.gif-hero .a3-stat{background:var(--bg-2);border-radius:8px;padding:6px 8px}
+.gif-hero .a3-sv{font-size:11px;font-weight:800;color:var(--brand);line-height:1}
+.gif-hero .a3-sl{font-size:6.5px;color:var(--ink-3);margin-top:2px;font-weight:600}
+/* alerts */
+.gif-hero .a3-alert{display:flex;align-items:flex-start;gap:5px;padding:6px 8px;border-radius:8px;border:1px solid;font-size:7px;color:var(--ink-2);line-height:1.35;flex-shrink:0}
+.gif-hero .a3-alert span{flex-shrink:0;font-size:10px;line-height:1.2}
+.gif-hero .a3-alert b{font-weight:700;color:var(--ink)}
+.gif-hero .a3-alert.warn{background:#fffbeb;border-color:#fde68a}
+.gif-hero .a3-alert.good{background:#f0fdf4;border-color:#bbf7d0}
+/* stagger-in — cada item tiene sus propios keyframes baked en el ciclo de 8s
+   scene3 visible: 54%–97% (4.32s–7.76s) */
+.gif-hero .a3-body>*{opacity:0;transform:translateY(5px)}
+.gif-hero .a3-body>*:nth-child(1){animation:a3i1 8s var(--ease) infinite}
+.gif-hero .a3-body>*:nth-child(2){animation:a3i2 8s var(--ease) infinite}
+.gif-hero .a3-body>*:nth-child(3){animation:a3i3 8s var(--ease) infinite}
+.gif-hero .a3-body>*:nth-child(4){animation:a3i4 8s var(--ease) infinite}
+@keyframes a3i1{0%,54%{opacity:0;transform:translateY(5px)}60%,96%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(5px)}}
+@keyframes a3i2{0%,58%{opacity:0;transform:translateY(5px)}64%,96%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(5px)}}
+@keyframes a3i3{0%,63%{opacity:0;transform:translateY(5px)}69%,96%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(5px)}}
+@keyframes a3i4{0%,68%{opacity:0;transform:translateY(5px)}74%,96%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(5px)}}
 
 /* =========================================
    GIF 2: HOW step 1 — Export from WhatsApp
